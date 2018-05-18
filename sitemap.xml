@@ -19,4 +19,52 @@
 
     </url>
     
+    <url>
+        <loc>https://kiros33.github.io/welcome.html</loc>
+        
+        <lastmod>2017-07-27T19:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://kiros33.github.io/using-tags.html</loc>
+        
+        <lastmod>2017-07-27T17:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>https://kiros33.github.io/a-full-and-comprehensive-style-test.html</loc>
+        
+        <lastmod>2012-09-01T19:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
 </urlset>
