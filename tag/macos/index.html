@@ -136,7 +136,7 @@
             
         </div>
         
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+            <a class="subscribe-button" href="#subscribe">Search</a>
         
     </div>
 </nav>
@@ -183,10 +183,7 @@
                     <h2 class="post-card-title">맥에서 GitHub Page와 Jekyll 연동한 블로깅 시작하기</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>최초의 블로깅
-
-GitHub와 Jekyll을 연동하여 블로깅을 시작함
-</p>
+                    <p>최초의 블로깅 GitHub와 Jekyll을 연동하여 블로깅을 시작함 javascript highlight function syntaxHighlight(code) { var foo = 'Hello World'; var bar = 100; } var agent = navigator.userAgent.toLowerCase(); var _iPhone = false; var _chrome =</p>
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -244,18 +241,26 @@ GitHub와 Jekyll을 연동하여 블로깅을 시작함
                 
                     <img class="subscribe-overlay-logo" src="/assets/images/blog-icon.png" alt="머리 나쁜 개발자와 맥 라이프" />
                 
-                <h1 class="subscribe-overlay-title">Subscribe to 머리 나쁜 개발자와 맥 라이프</h1>
-                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
-                <form method="post" action="/subscribe/" class="">
-    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+                <h1 class="subscribe-overlay-title">Search 머리 나쁜 개발자와 맥 라이프</h1>
+                <p class="subscribe-overlay-description">lunr.js를 이용한 posts 검색</p>
+                <form id="searchform" method="post" action="/search.html" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
 
     <div class="form-group">
-        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+        <input class="subscribe-email" onkeyup="doSearch()"id="query" type="text" name="query"placeholder="Search..." /> </div>
     </div>
-    <button class="" type="submit" disabled><span>Subscribe</span></button>
-    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+    <button class="" type="submit"><span>Search</span></button>
+    <script type="text/javascript">
+        function doSearch() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#query").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
 </form>
-
             </div>
         </div>
     
