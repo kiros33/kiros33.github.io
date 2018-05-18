@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>두번째 글</title>
+        
+          <description>&lt;p&gt;Hey! Welcome to Ghost, it’s great to have you :)&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 18 May 2018 13:25:07 +0900</pubDate>
+        <link>
+        https://kiros33.github.io/12594154b9abca45f4b601e56718739fd46ec5</link>
+        <guid isPermaLink="true">https://kiros33.github.io/12594154b9abca45f4b601e56718739fd46ec5</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>맥에서 GitHub Page와 Jekyll 연동한 블로깅 시작하기</title>
         
           <description>&lt;h3 id=&quot;최초의-블로깅&quot;&gt;최초의 블로깅&lt;/h3&gt;
