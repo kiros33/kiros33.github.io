@@ -167,9 +167,18 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "00-14-15-1fc3cd5dbab80eb9671a3e2dbfaddb6e": {
+        "title": "빈 디렉토리를 git에 추가하는 방법",
+            "author": "kiros33",
+            "category": "",
+            "content": "obj 혹은 lib 디렉토리 처럼 빌드에 필요한 경우 사용하지만 버전 관리에는 넣고 싶지 않은 경우가 있습니다.이럴땐 make clean 과 같이 불필요한 파일을 제거 한 뒤 git add 및 git commit 을 하게됩니다.하지만 디렉토리가 비어있는 경우 git add 명령으로 추가되지 않습니다. 추가되지 않은 디렉토리를 다음과 같이 다른 개발환경에서 빌드하고자 할 때 No such file or directory 오류가 발생합니다.➜  small compiler git:(master) ✗ makemake scmake[1]: Entering directory `/home/kiros33/Projects/ADDB/poc-yacc/small compiler'bison -d src/grammar.y --output=src/grammar.tab.cflex -o src/lex.yy.c src/lex.lg++ -c -std=gnu++11 -Iinc -o obj/grammar.tab.o src/grammar.tab.cAssembler messages:Fatal error: can't create obj/grammar.tab.o: No such file or directorymake[1]: *** [obj/grammar.tab.o] Error 1make[1]: Leaving directory `/home/kiros33/Projects/ADDB/poc-yacc/small compiler'make: *** [all] Error 2일일이 mkdir 해줄 수 없는 일이고 굳이 불필요한 파일을 추가할 수도 없습니다. 이럴 땐 비어있는 디렉토리 전체를 찾아서 .gitignore 파일을 추가해주면 해결됩니다.find . -name .git -prune -o -type d -empty -exec touch {}/.gitignore \\;",
+        "url": "/00-14-15-1fc3cd5dbab80eb9671a3e2dbfaddb6e"
+    }
+    ,
+    
     "12-59-41-54b9abca45f4b601e56718739fd46ec5": {
         "title": "두번째 글",
-            "author": "ghost",
+            "author": "kiros33",
             "category": "",
             "content": "Hey! Welcome to Ghost, it’s great to have you :)while :; do clear; ls *.html; sleep 1; done",
         "url": "/12-59-41-54b9abca45f4b601e56718739fd46ec5"
@@ -178,7 +187,7 @@ into the {body} of the default.hbs template -->
     
     "blogging-with-github-and-jekyll-on-macos": {
         "title": "맥에서 GitHub Page와 Jekyll 연동한 블로깅 시작하기",
-            "author": "배상용",
+            "author": "kiros33",
             "category": "",
             "content": "최초의 블로깅GitHub와 Jekyll을 연동하여 블로깅을 시작함javascript highlightfunction syntaxHighlight(code) {   var foo = 'Hello World';   var bar = 100;}var agent = navigator.userAgent.toLowerCase();        var _iPhone = false;        var _chrome = false;        var result = false;        if (agent.indexOf(\"iphone\") != -1) {            _iPhone = true;        }        if (agent.indexOf(\"chrome\") != -1) {            _chrome = true;        }bash highlight➜  kiros33.github.io git:(master) git pushCounting objects: 6, done.Delta compression using up to 4 threads.Compressing objects: 100% (6/6), done.Writing objects: 100% (6/6), 46.26 KiB | 23.13 MiB/s, done.Total 6 (delta 4), reused 0 (delta 0)remote: Resolving deltas: 100% (4/4), completed with 4 local objects.To github.com:kiros33/kiros33.github.io.git   796e219..a570287  master -&gt; masterpython highlight#!/usr/bin/pythonimport sysimport base64def error_handle():    print '[+] use: $python Base64EnDecoder.py -e [file] -o [file]'    print '[+] use: $python Base64EnDecoder.py -d [file] -o [file]'    sys.exit(1)if len(sys.argv) != 5:    error_handle()try:    input = open(sys.argv[2], 'rb').read()except:    print '[*] error: file does NOT exist.'    sys.exit(1)try:    if sys.argv[1] == '-e':        data = base64.b64encode(input)    elif sys.argv[1] == '-d':        data = base64.b64decode(input)    else:        print '[*] error: input option is \\'-e\\' or \\'-d\\'.'        error_handle()except:    print '[*] error: incorrect padding'    sys.exit(1)if sys.argv[3] == '-o':    output = open(sys.argv[4], 'wb')    output.write(data)else:    print '[*] error: output option is \\'-o\\'.'    error_handle()",
         "url": "/blogging-with-github-and-jekyll-on-macos"
