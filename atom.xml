@@ -8,6 +8,26 @@
     
       
       <item>
+        <title>JEKYLL에 gulp로 CSS 적용하는 방법;</title>
+        
+          <description>&lt;p&gt;FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다.
+1) Node 설치, 보통 npm도 같이 설치됨
+2) 걸프 설치, 전역설치, npm install gulp-cli -g
+3) Jekyll Source Folder 로 이동
+4) 패키지 설치, npm install
+5) 이제 명령창에서 gulp를 입력하면 프로그램이 실행되고 변경된 css를 감지해서 minifiy 합니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 31 May 2018 12:55:36 +0900</pubDate>
+        <link>
+        https://kiros33.github.io/20180531125345-bcb9d675a3c2ea47ee45c3b5bcc1605c</link>
+        <guid isPermaLink="true">https://kiros33.github.io/20180531125345-bcb9d675a3c2ea47ee45c3b5bcc1605c</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>빈 디렉토리를 git에 추가하는 방법</title>
         
           <description>&lt;p&gt;obj 혹은 lib 디렉토리 처럼 빌드에 필요한 경우 사용하지만 버전 관리에는 넣고 싶지 않은 경우가 있습니다.&lt;/p&gt;
