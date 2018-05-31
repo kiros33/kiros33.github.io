@@ -34,15 +34,7 @@
     <meta property="og:site_name" content="배저씨네" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="JEKYLL에 gulp로 CSS 적용하는 방법;" />
-    <meta property="og:description" content="FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다.
-1) Node 설치, 보통 npm도 같이 설치됨
-2) 걸프 설치, 전역설치, npm install gulp-cli -g
-3) Jekyll Source Folder 로 이동
-4) 패키지 설치, npm install
-5) 이제 명령창에서 gulp를 입력하면 프로그램이 실행되고 변경된 css를 감지해서 minifiy 합니다.
-
-
-" />
+    <meta property="og:description" content="Jekyll에서 Gulp 사용하는 방법   FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다. Node 설치합니다. 보통 npm도 같이 설치됨 걸프를 전역으로 설치합니다. npm install gulp-cli -g Jekyll Source Folder로 이동합니다. gulpfile.js 파일이 있는 위치입니다. 패키지를 설치합니다. npm install 혹은 npm install -save-dev gulp gulp-util 명령을 사용하면 됩니다. 이제" />
     <meta property="og:url" content="https://kiros33.github.io/20180531125345-bcb9d675a3c2ea47ee45c3b5bcc1605c" />
     <meta property="og:image" content="https://kiros33.github.io/assets/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/kiros33" />
@@ -52,15 +44,7 @@
     <meta property="article:tag" content="Jekyll Css Gulp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="JEKYLL에 gulp로 CSS 적용하는 방법;" />
-    <meta name="twitter:description" content="FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다.
-1) Node 설치, 보통 npm도 같이 설치됨
-2) 걸프 설치, 전역설치, npm install gulp-cli -g
-3) Jekyll Source Folder 로 이동
-4) 패키지 설치, npm install
-5) 이제 명령창에서 gulp를 입력하면 프로그램이 실행되고 변경된 css를 감지해서 minifiy 합니다.
-
-
-" />
+    <meta name="twitter:description" content="Jekyll에서 Gulp 사용하는 방법   FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다. Node 설치합니다. 보통 npm도 같이 설치됨 걸프를 전역으로 설치합니다. npm install gulp-cli -g Jekyll Source Folder로 이동합니다. gulpfile.js 파일이 있는 위치입니다. 패키지를 설치합니다. npm install 혹은 npm install -save-dev gulp gulp-util 명령을 사용하면 됩니다. 이제" />
     <meta name="twitter:url" content="https://kiros33.github.io/" />
     <meta name="twitter:image" content="https://kiros33.github.io/assets/images/blog-cover.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -92,15 +76,7 @@
         "@type": "WebPage",
         "@id": "https://kiros33.github.io/20180531125345-bcb9d675a3c2ea47ee45c3b5bcc1605c"
     },
-    "description": "FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다.
-1) Node 설치, 보통 npm도 같이 설치됨
-2) 걸프 설치, 전역설치, npm install gulp-cli -g
-3) Jekyll Source Folder 로 이동
-4) 패키지 설치, npm install
-5) 이제 명령창에서 gulp를 입력하면 프로그램이 실행되고 변경된 css를 감지해서 minifiy 합니다.
-
-
-"
+    "description": "Jekyll에서 Gulp 사용하는 방법   FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다. Node 설치합니다. 보통 npm도 같이 설치됨 걸프를 전역으로 설치합니다. npm install gulp-cli -g Jekyll Source Folder로 이동합니다. gulpfile.js 파일이 있는 위치입니다. 패키지를 설치합니다. npm install 혹은 npm install -save-dev gulp gulp-util 명령을 사용하면 됩니다. 이제"
 }
     </script>
 
@@ -192,12 +168,20 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다.
-1) Node 설치, 보통 npm도 같이 설치됨
-2) 걸프 설치, 전역설치, npm install gulp-cli -g
-3) Jekyll Source Folder 로 이동
-4) 패키지 설치, npm install
-5) 이제 명령창에서 gulp를 입력하면 프로그램이 실행되고 변경된 css를 감지해서 minifiy 합니다.</p>
+                    <h3 id="jekyll에서-gulp-사용하는-방법">Jekyll에서 Gulp 사용하는 방법</h3>
+<p> <br />
+FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다.</p>
+
+<ol>
+  <li>Node 설치합니다. 보통 npm도 같이 설치됨</li>
+  <li>걸프를 전역으로 설치합니다.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  npm install gulp-cli <span class="nt">-g</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Jekyll Source Folder</strong>로 이동합니다. gulpfile.js 파일이 있는 위치입니다.</li>
+  <li>패키지를 설치합니다. <code class="highlighter-rouge">npm install</code> 혹은 <code class="highlighter-rouge">npm install -save-dev gulp gulp-util</code> 명령을 사용하면 됩니다.</li>
+  <li>이제 명령창에서 gulp를 입력하면 프로그램이 실행되고 변경된 css를 감지해서 minifiy 합니다. minify된 css는 built 폴더로 저장됩니다.</li>
+</ol>
 
 <p><img src="https://user-images.githubusercontent.com/1563133/40760528-272c1c6a-64d2-11e8-80c8-af1108b9b761.png" alt="gulp 동작 샘플" /></p>
 

@@ -10,12 +10,9 @@
       <item>
         <title>JEKYLL에 gulp로 CSS 적용하는 방법;</title>
         
-          <description>&lt;p&gt;FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다.
-1) Node 설치, 보통 npm도 같이 설치됨
-2) 걸프 설치, 전역설치, npm install gulp-cli -g
-3) Jekyll Source Folder 로 이동
-4) 패키지 설치, npm install
-5) 이제 명령창에서 gulp를 입력하면 프로그램이 실행되고 변경된 css를 감지해서 minifiy 합니다.&lt;/p&gt;
+          <description>&lt;h3 id=&quot;jekyll에서-gulp-사용하는-방법&quot;&gt;Jekyll에서 Gulp 사용하는 방법&lt;/h3&gt;
+&lt;p&gt; &lt;br /&gt;
+FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다.&lt;/p&gt;
 
 </description>
         
