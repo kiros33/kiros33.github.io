@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>파워셀에서 임시 파일들을 제거하는 방법</title>
+        
+          <description>&lt;p&gt;가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 25 Jun 2018 01:49:59 +0900</pubDate>
+        <link>
+        https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7</link>
+        <guid isPermaLink="true">https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법</title>
         
           <description>&lt;h1 id=&quot;이글은-아래-주소를-참고하여-작성하였습니다&quot;&gt;이글은 아래 주소를 참고하여 작성하였습니다.&lt;/h1&gt;

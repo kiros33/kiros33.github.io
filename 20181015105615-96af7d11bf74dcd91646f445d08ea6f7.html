@@ -11,7 +11,7 @@
 
 
 
-    <title>터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법</title>
+    <title>파워셀에서 임시 파일들을 제거하는 방법</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -27,26 +27,26 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="넓고 얕은 지식을 지향하는 무식한 개발자" />
     <link rel="shortcut icon" href="https://kiros33.github.io/assets/images/favicon-kiros33.png" type="image/png" />
-    <link rel="canonical" href="https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75" />
+    <link rel="canonical" href="https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="배저씨네" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법" />
-    <meta property="og:description" content="이글은 아래 주소를 참고하여 작성하였습니다. How to use sudo with Touch ID on your Mac 터미널에서 sudo 명령을 사용하는 경우 일반적으로 키보드를 통해 암호를 입력하는 방식을 사용합니다. 하지만 Touch ID를 내장하고 있는 맥이라면 이를 활용할 수 있는 방법이 있어 소개합니다. Macbook Pro with Touch ID 에서 sudo 명령시 Touch ID를" />
-    <meta property="og:url" content="https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75" />
-    <meta property="og:image" content="https://kiros33.github.io/assets/images/mac-terminal.jpg" />
+    <meta property="og:title" content="파워셀에서 임시 파일들을 제거하는 방법" />
+    <meta property="og:description" content="가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다. &lt;# Cleaning Temporary Files #&gt; function GoDir($TargetDir) { echo "&gt;&gt;&gt;&gt;&gt; Moving to $TargetDir" Set-Location $TargetDir } $CurDir = (Get-Item -Path ".\").FullName GoDir("C:\Windows\Temp") Remove-Item * -recurse -force GoDir("C:\Windows\Prefetch") Remove-Item * -recurse -force GoDir("C:\Windows\SoftwareDistribution") Remove-Item ".\Download\*" -recurse -force GoDir("C:\Users") Remove-Item ".\*\Appdata\Local\Temp\*" -recurse -force" />
+    <meta property="og:url" content="https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7" />
+    <meta property="og:image" content="https://kiros33.github.io/assets/images/win-powershell.png" />
     <meta property="article:publisher" content="https://www.facebook.com/kiros33" />
     <meta property="article:author" content="https://www.facebook.com/kiros33" />
     <meta property="article:published_time" content="2018-06-25T01:49:59+09:00" />
     <meta property="article:modified_time" content="2018-06-25T01:49:59+09:00" />
     <meta property="article:tag" content="Mac" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법" />
-    <meta name="twitter:description" content="이글은 아래 주소를 참고하여 작성하였습니다. How to use sudo with Touch ID on your Mac 터미널에서 sudo 명령을 사용하는 경우 일반적으로 키보드를 통해 암호를 입력하는 방식을 사용합니다. 하지만 Touch ID를 내장하고 있는 맥이라면 이를 활용할 수 있는 방법이 있어 소개합니다. Macbook Pro with Touch ID 에서 sudo 명령시 Touch ID를" />
+    <meta name="twitter:title" content="파워셀에서 임시 파일들을 제거하는 방법" />
+    <meta name="twitter:description" content="가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다. &lt;# Cleaning Temporary Files #&gt; function GoDir($TargetDir) { echo "&gt;&gt;&gt;&gt;&gt; Moving to $TargetDir" Set-Location $TargetDir } $CurDir = (Get-Item -Path ".\").FullName GoDir("C:\Windows\Temp") Remove-Item * -recurse -force GoDir("C:\Windows\Prefetch") Remove-Item * -recurse -force GoDir("C:\Windows\SoftwareDistribution") Remove-Item ".\Download\*" -recurse -force GoDir("C:\Users") Remove-Item ".\*\Appdata\Local\Temp\*" -recurse -force" />
     <meta name="twitter:url" content="https://kiros33.github.io/" />
-    <meta name="twitter:image" content="https://kiros33.github.io/assets/images/mac-terminal.jpg" />
+    <meta name="twitter:image" content="https://kiros33.github.io/assets/images/win-powershell.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="배저씨네" />
     <meta name="twitter:label2" content="Filed under" />
@@ -65,18 +65,18 @@
         "name": "배저씨네",
         "logo": "https://kiros33.github.io/assets/images/blog-icon-kiros33.png"
     },
-    "url": "https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75",
+    "url": "https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kiros33.github.io/assets/images/mac-terminal.jpg",
+        "url": "https://kiros33.github.io/assets/images/win-powershell.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75"
+        "@id": "https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7"
     },
-    "description": "이글은 아래 주소를 참고하여 작성하였습니다. How to use sudo with Touch ID on your Mac 터미널에서 sudo 명령을 사용하는 경우 일반적으로 키보드를 통해 암호를 입력하는 방식을 사용합니다. 하지만 Touch ID를 내장하고 있는 맥이라면 이를 활용할 수 있는 방법이 있어 소개합니다. Macbook Pro with Touch ID 에서 sudo 명령시 Touch ID를"
+    "description": "가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다. &lt;# Cleaning Temporary Files #&gt; function GoDir($TargetDir) { echo "&gt;&gt;&gt;&gt;&gt; Moving to $TargetDir" Set-Location $TargetDir } $CurDir = (Get-Item -Path ".\").FullName GoDir("C:\Windows\Temp") Remove-Item * -recurse -force GoDir("C:\Windows\Prefetch") Remove-Item * -recurse -force GoDir("C:\Windows\SoftwareDistribution") Remove-Item ".\Download\*" -recurse -force GoDir("C:\Users") Remove-Item ".\*\Appdata\Local\Temp\*" -recurse -force"
 }
     </script>
 
@@ -89,7 +89,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="파워셀에서 임시 파일들을 제거하는 방법" href="/feed.xml" />
 
 
 </head>
@@ -169,68 +169,46 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법</h1>
+                <h1 class="post-full-title">파워셀에서 임시 파일들을 제거하는 방법</h1>
             </header>
 
             
-            <figure class="post-full-image" style="background-image: url(/assets/images/mac-terminal.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/images/win-powershell.png)">
             </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="이글은-아래-주소를-참고하여-작성하였습니다">이글은 아래 주소를 참고하여 작성하였습니다.</h1>
-<p><a href="https://www.imore.com/how-use-sudo-your-mac-touch-id">How to use sudo with Touch ID on your Mac</a></p>
+                    <p>가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다.</p>
 
-<p>터미널에서 sudo 명령을 사용하는 경우 일반적으로 키보드를 통해 암호를 입력하는 방식을 사용합니다.</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">&lt;#
+	Cleaning Temporary Files
+#&gt;</span>
 
-<p>하지만 Touch ID를 내장하고 있는 맥이라면 이를 활용할 수 있는 방법이 있어 소개합니다.</p>
+<span class="k">function </span>GoDir<span class="o">(</span><span class="nv">$TargetDir</span><span class="o">)</span>
+<span class="o">{</span>
+	<span class="nb">echo</span> <span class="s2">"&gt;&gt;&gt;&gt;&gt; Moving to </span><span class="nv">$TargetDir</span><span class="s2">"</span>
+	<span class="nb">Set-Location</span> <span class="nv">$TargetDir</span>
+<span class="o">}</span>
 
-<h3 id="macbook-pro-with-touch-id-에서-sudo-명령시-touch-id를-활성화하는-방법">Macbook Pro with Touch ID 에서 sudo 명령시 Touch ID를 활성화하는 방법</h3>
-<p> </p>
-<ol>
-  <li>
-    <p>파인더에서 이동(<code class="highlighter-rouge">COMMAND</code> + <code class="highlighter-rouge">SHIFT</code> + <code class="highlighter-rouge">G</code>)하기로 /etc/pam.d/sudo 파일로 이동</p>
-  </li>
-  <li>
-    <p>정보창(<code class="highlighter-rouge">COMMAND</code> + <code class="highlighter-rouge">I</code>)을 열기</p>
-  </li>
-  <li>
-    <p>좌측 하단의 열쇠모양의 잠금 아이콘을 클릭해서 잠금 해제</p>
-  </li>
-  <li>
-    <p>인증정보를 입력하거나 Touch ID로 인증</p>
-  </li>
-  <li>
-    <p>하단의 공유 및 권한(Saring &amp; Permissions) 중 everyone 을 <strong>Read Only</strong>에서 <strong>Read &amp; Write</strong> 로 변경</p>
-  </li>
-  <li>
-    <p>텍스트 편집 프로그램으로 sudo 파일을 오픈</p>
-  </li>
-  <li><code class="highlighter-rouge">auth       sufficient     pam_tid.so</code> 내용을 두번째 줄에 붙여넣기
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># sudo: auth account password session
-auth       sufficient     pam_tid.so
-auth       sufficient     pam_smartcard.so
-auth       required       pam_opendirectory.so
-account    required       pam_permit.so
-password   required       pam_deny.so
-session    required       pam_permit.so
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>sudo 파일을 저장하고 닫기</p>
-  </li>
-  <li>
-    <p>정보창(<code class="highlighter-rouge">COMMAND</code> + <code class="highlighter-rouge">I</code>)을 열기</p>
-  </li>
-  <li>권한을 <strong>Read Only</strong>로 변경하고 잠금 아이콘을 클릭해서 다시 잠금</li>
-</ol>
+<span class="nv">$CurDir</span> <span class="o">=</span> <span class="o">(</span><span class="nb">Get-Item</span> -Path <span class="s2">".\"</span><span class="o">)</span>.FullName
 
-<p>이제 <em>sudo</em>를 포함한 명령 사용시 Touch ID로 인증이 가능합니다.</p>
+GoDir<span class="o">(</span><span class="s2">"C:\Windows\Temp"</span><span class="o">)</span>
+<span class="nb">Remove-Item</span> <span class="k">*</span> -recurse -force
 
-<ul>
-  <li>늦은시간 귀차니즘으로 스크린샷을 생략하고 작성하였습니다. 질문이 있다면 하단에 댓글로 작성해주시면 답변드리겠습니다.</li>
-</ul>
+GoDir<span class="o">(</span><span class="s2">"C:\Windows\Prefetch"</span><span class="o">)</span>
+<span class="nb">Remove-Item</span> <span class="k">*</span> -recurse -force
+
+GoDir<span class="o">(</span><span class="s2">"C:\Windows\SoftwareDistribution"</span><span class="o">)</span>
+<span class="nb">Remove-Item</span> <span class="s2">".\Download\*"</span> -recurse -force
+
+
+GoDir<span class="o">(</span><span class="s2">"C:\Users"</span><span class="o">)</span>
+<span class="nb">Remove-Item</span> <span class="s2">".\*\Appdata\Local\Temp\*"</span> -recurse -force
+
+<span class="nb">echo</span> <span class="s2">"Return to </span><span class="nv">$CurDir</span><span class="s2">"</span>
+<span class="nb">Set-Location</span> <span class="nv">$CurDir</span>
+</code></pre></div></div>
 
                     <!-- Google adsense code -->
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -310,8 +288,8 @@ session    required       pam_permit.so
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://kiros33.github.io//20180625014756-cb9879e0e0e48d1ca070b54896f94a75';
-                            this.page.identifier = 'https://kiros33.github.io//20180625014756-cb9879e0e0e48d1ca070b54896f94a75';
+                            this.page.url = 'https://kiros33.github.io//20181015105615-96af7d11bf74dcd91646f445d08ea6f7';
+                            this.page.identifier = 'https://kiros33.github.io//20181015105615-96af7d11bf74dcd91646f445d08ea6f7';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -356,14 +334,14 @@ session    required       pam_permit.so
                                 
                                   
                                     
-                                        
-                                        
-                                            <li><a href="/20181015105615-96af7d11bf74dcd91646f445d08ea6f7">파워셀에서 임시 파일들을 제거하는 방법</a></li>
-                                        
-                                    
                                   
                                 
                                   
+                                    
+                                        
+                                        
+                                            <li><a href="/20180625014756-cb9879e0e0e48d1ca070b54896f94a75">터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법</a></li>
+                                        
                                     
                                   
                                 
@@ -424,15 +402,18 @@ session    required       pam_permit.so
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
                 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/20181015105615-96af7d11bf74dcd91646f445d08ea6f7">
-                <div class="post-card-image" style="background-image: url(/assets/images/win-powershell.png)"></div>
+            <a class="post-card-image-link" href="/20180625014756-cb9879e0e0e48d1ca070b54896f94a75">
+                <div class="post-card-image" style="background-image: url(/assets/images/mac-terminal.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/20181015105615-96af7d11bf74dcd91646f445d08ea6f7">
+            <a class="post-card-content-link" href="/20180625014756-cb9879e0e0e48d1ca070b54896f94a75">
                 <header class="post-card-header">
                     
                         
@@ -450,67 +431,10 @@ session    required       pam_permit.so
                         
                     
 
-                    <h2 class="post-card-title">파워셀에서 임시 파일들을 제거하는 방법</h2>
+                    <h2 class="post-card-title">터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다. ```powershell function GoDir($TargetDir) { echo ">>>>> Moving to $TargetDir" Set-Location $TargetDir } $CurDir = (Get-Item -Path ".\").FullName GoDir("C:\Windows\Temp") Remove-Item * -recurse -force GoDir("C:\Windows\Prefetch") Remove-Item</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/kiros33.jpg" alt="Sangyong Bae" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/kiros33/">Sangyong Bae</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-            
-
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/20180606001200-558062fd40c11db3f0103bff12927849">
-                <div class="post-card-image" style="background-image: url(/assets/images/558062fd40c11db3f0103bff12927849/001.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/20180606001200-558062fd40c11db3f0103bff12927849">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">부천시</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">부천시 특고압의 학교앞 매설 반대 국민청원</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>부천시 특고압의 학교앞 매설 반대 국민청원에 대한 정보를 공유합니다. 밀집지 우회 가능하도록 힘을 보태주세요. 기술적인 안정성과 비용적인 측면을 대한민국의 미래인 아이들에게 잣대로 들이밀지 않았으면 좋겠습니다. 국민청원 바로가기 국민청원 - 초등학교 앞 지하 8m에</p>
+                    <p>이글은 아래 주소를 참고하여 작성하였습니다. How to use sudo with Touch ID on your Mac 터미널에서 sudo 명령을 사용하는 경우 일반적으로 키보드를 통해 암호를 입력하는 방식을 사용합니다. 하지만 Touch ID를 내장하고 있는 맥이라면</p>
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -559,18 +483,18 @@ session    required       pam_permit.so
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법</div>
+    <div class="floating-header-title">파워셀에서 임시 파일들을 제거하는 방법</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%ED%84%B0%EB%AF%B8%EB%84%90%EC%9D%98+sudo+%EB%AA%85%EB%A0%B9+%EC%82%AC%EC%9A%A9%EC%8B%9C+%EB%A7%A5%EC%9D%98+%ED%84%B0%EC%B9%98%EC%95%84%EC%9D%B4%EB%94%94%EB%A5%BC+%ED%86%B5%ED%95%B4+%EC%9D%B8%EC%A6%9D%ED%95%98%EB%8A%94+%EB%B0%A9%EB%B2%95&amp;url=https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%ED%8C%8C%EC%9B%8C%EC%85%80%EC%97%90%EC%84%9C+%EC%9E%84%EC%8B%9C+%ED%8C%8C%EC%9D%BC%EB%93%A4%EC%9D%84+%EC%A0%9C%EA%B1%B0%ED%95%98%EB%8A%94+%EB%B0%A9%EB%B2%95&amp;url=https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
