@@ -1,14 +1,137 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2018-11-16T12:12:56+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">서비스 약관</title><link href="https://kiros33.github.io/terms-policy" rel="alternate" type="text/html" title="서비스 약관" /><published>2018-11-16T12:04:17+09:00</published><updated>2018-11-16T12:04:17+09:00</updated><id>https://kiros33.github.io/terms-policy</id><content type="html" xml:base="https://kiros33.github.io/terms-policy">&lt;h1 id=&quot;서비스-약관&quot;&gt;서비스 약관&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2019-01-10T20:21:38+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">오라클 라이브 SQL 소개</title><link href="https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74" rel="alternate" type="text/html" title="오라클 라이브 SQL 소개" /><published>2019-01-10T13:57:05+09:00</published><updated>2019-01-10T13:57:05+09:00</updated><id>https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74</id><content type="html" xml:base="https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74">&lt;p&gt;&lt;strong&gt;Oracle Live SQL을 소개합니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;오라클&lt;/strong&gt;을 설치하고 &lt;code&gt;Sample schema&lt;/code&gt;를 추가하는 것은 개발자라면 기본으로 할 수 있어야 할 것입니다!&lt;/p&gt;
+
+&lt;p&gt;그렇다고 테스트나 학습을 위해 필요할 때마다 서버를 만드는 것은 참으로 고욕입니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;공통으로 사용할 수 있는 테스트 서버의 경우는 마음대로 데이터베이스나 테이블을 다루기 힘들고&lt;/li&gt;
+  &lt;li&gt;개인 서버를 운용하자니 번거롭기도 하고 리소스가 부족하기도 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이럴때 간단한 테스트나 학습용으로 이용하기 좋은 오라클 서비스를 소개합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;목차&quot;&gt;목차&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#기본-사용법&quot;&gt;기본 사용법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#테이블-직접-생성하여-사용하는-방법&quot;&gt;테이블 직접 생성하여 사용하는 방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#기본-스키마를-사용하는-방법&quot;&gt;기본 스키마를 사용하는 방법&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#기타&quot;&gt;기타&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;기본-사용법&quot;&gt;기본 사용법&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;사이트 접속&lt;/p&gt;
+
+    &lt;p&gt;다음 주소를 브라우저에 입력합니다.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://livesql.oracle.com&quot; target=&quot;_blank&quot;&gt;https://livesql.oracle.com&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/001.840.jpg&quot; alt=&quot;HOME&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;SQL Worksheet&lt;/code&gt; 메뉴를 선택합니다. 이때 &lt;u&gt;사이트에 로그인이 필요&lt;/u&gt;합니다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;SQL 입력창이 나타나면 아래의 SQL을 입력하여 실행해봅니다.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;select * from emp;
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;현재는 세션에 사용자 테이블이 만들어져있지 않아서 오류가 발생합니다.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;ORA-00942: table or view does not exist
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/002.840.jpg&quot; alt=&quot;SQL 실행&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;테이블-직접-생성하여-사용하는-방법&quot;&gt;테이블 직접 생성하여 사용하는 방법&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;Code Library&lt;/code&gt;에서 &lt;code&gt;EMP and DEPT&lt;/code&gt; 를 실행하여 테이블을 생성합니다.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;code&gt;EMP and DEPT&lt;/code&gt; 라이브러리 선택&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/003.840.jpg&quot; alt=&quot;EMP and DEPT 라이브러리 선택&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;code&gt;Run Script&lt;/code&gt; 버튼을 눌러 스크립트 실행하면 수행 여부를 확인합니다. &lt;code&gt;Perform Actions(s)&lt;/code&gt; 버튼을 누르세요.&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/004.840.jpg&quot; alt=&quot;스크립트 실행&quot; /&gt;&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/005.840.jpg&quot; alt=&quot;스크립트 확인&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;code&gt;SQL Worksheet&lt;/code&gt; 버튼을 눌러 SQL 창으로 이동합니다.&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/006.840.jpg&quot; alt=&quot;스크립트 완료&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SQL 실행&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;이제 &lt;code&gt;emp&lt;/code&gt;와 &lt;code&gt;dept&lt;/code&gt; 테이블이 생성되어 SQL문을 수행할 수 있습니다.&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/007.840.jpg&quot; alt=&quot;select emp table&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;수행 할 SQL을 선택하고 &lt;code&gt;Run&lt;/code&gt; 버튼을 누르면 선택된 명령만 수행됩니다.&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/008.840.jpg&quot; alt=&quot;select dept table&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;기본-스키마를-사용하는-방법&quot;&gt;기본 스키마를 사용하는 방법&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;스키마 선택&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;code&gt;Schema&lt;/code&gt; 메뉴를 선택하면 &lt;code&gt;My Schema&lt;/code&gt; 가 기본 선택되어있습니다. 콤보 박스를 눌러보면 다음과 같이 이미 등록된 여러 스키마를 볼 수 있습니다.
+&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/009.840.jpg&quot; alt=&quot;select dept table&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;테이블 이름 앞에 스키마 이름을 추가해서 SQL문을 작성하면 기존에 존재하는 스키마를 모두 사용할 수 있습니다.&lt;/p&gt;
+
+        &lt;p&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/010.840.jpg&quot; alt=&quot;select dept table&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;기타&quot;&gt;기타&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;My Scripts&lt;/code&gt;에 직접 스크립트를 저장해서 일괄 수행할 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;My Session&lt;/code&gt;에서 초기화를 하면 스크립트 수행으로 생성된 오브젝트들을 삭제하여 처음 상태로 돌아갈 수 있습니다.&lt;/li&gt;
+  &lt;li&gt;결과는 최대 50줄만 보이며 전체 결과는 CSV 형태의 텍스트 문서로 다운로드 할 수 있습니다. &lt;code&gt;Actions&lt;/code&gt; 에서 최대 5000 까지 설정할 수도 있습니다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Sangyong Bae</name></author><category term="Oracle" /><category term="DBMS" /><category term="SQL" /><summary type="html">Oracle Live SQL을 소개합니다.</summary></entry><entry><title type="html">서비스 약관</title><link href="https://kiros33.github.io/terms-policy" rel="alternate" type="text/html" title="서비스 약관" /><published>2018-11-16T12:04:17+09:00</published><updated>2018-11-16T12:04:17+09:00</updated><id>https://kiros33.github.io/terms-policy</id><content type="html" xml:base="https://kiros33.github.io/terms-policy">&lt;h1 id=&quot;서비스-약관&quot;&gt;서비스 약관&lt;/h1&gt;
 
 &lt;p&gt;최종 수정 날짜: 2018/11/16&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;내용
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Sangyong Bae</name></author><category term="Policies" /><summary type="html">서비스 약관</summary></entry><entry><title type="html">개인정보처리방침</title><link href="https://kiros33.github.io/privacy-policy" rel="alternate" type="text/html" title="개인정보처리방침" /><published>2018-11-16T12:04:17+09:00</published><updated>2018-11-16T12:04:17+09:00</updated><id>https://kiros33.github.io/privacy-policy</id><content type="html" xml:base="https://kiros33.github.io/privacy-policy">&lt;h1 id=&quot;개인정보처리방침&quot;&gt;개인정보처리방침&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;내용
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Policies" /><summary type="html">서비스 약관</summary></entry><entry><title type="html">개인정보처리방침</title><link href="https://kiros33.github.io/privacy-policy" rel="alternate" type="text/html" title="개인정보처리방침" /><published>2018-11-16T12:04:17+09:00</published><updated>2018-11-16T12:04:17+09:00</updated><id>https://kiros33.github.io/privacy-policy</id><content type="html" xml:base="https://kiros33.github.io/privacy-policy">&lt;h1 id=&quot;개인정보처리방침&quot;&gt;개인정보처리방침&lt;/h1&gt;
 
 &lt;p&gt;최종 수정 날짜: 2018/11/16&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;내용
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Sangyong Bae</name></author><category term="Policies" /><summary type="html">개인정보처리방침</summary></entry><entry><title type="html">JDownloader의 Captcha Solver에서 Chrome 브라우저로 링크 열기</title><link href="https://kiros33.github.io/20181114144858-5039d5e8ba6c325b6eb20edd075c4b34" rel="alternate" type="text/html" title="JDownloader의 Captcha Solver에서 Chrome 브라우저로 링크 열기" /><published>2018-11-14T14:49:41+09:00</published><updated>2018-11-14T14:49:41+09:00</updated><id>https://kiros33.github.io/20181114144858-5039d5e8ba6c325b6eb20edd075c4b34</id><content type="html" xml:base="https://kiros33.github.io/20181114144858-5039d5e8ba6c325b6eb20edd075c4b34">&lt;p&gt;맥에서 Jdownloader를 사용하면서 캡차 플러그인이 적용된 크롬을 사용하는 방법입니다.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;내용
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Policies" /><summary type="html">개인정보처리방침</summary></entry><entry><title type="html">JDownloader의 Captcha Solver에서 Chrome 브라우저로 링크 열기</title><link href="https://kiros33.github.io/20181114144858-5039d5e8ba6c325b6eb20edd075c4b34" rel="alternate" type="text/html" title="JDownloader의 Captcha Solver에서 Chrome 브라우저로 링크 열기" /><published>2018-11-14T14:49:41+09:00</published><updated>2018-11-14T14:49:41+09:00</updated><id>https://kiros33.github.io/20181114144858-5039d5e8ba6c325b6eb20edd075c4b34</id><content type="html" xml:base="https://kiros33.github.io/20181114144858-5039d5e8ba6c325b6eb20edd075c4b34">&lt;p&gt;맥에서 Jdownloader를 사용하면서 캡차 플러그인이 적용된 크롬을 사용하는 방법입니다.&lt;/p&gt;
 
 &lt;p&gt;다양한 다운로드 사이트에서 파일을 받아야 할 때 Torrent를 제외하면 모두 JDownloader를 통해서 일괄 관리하고 있습니다.&lt;/p&gt;
 
@@ -22,10 +145,10 @@
 &lt;p&gt;이 경우 기본브라우저를 바꾸지 않고 크롬이 열리도록 하려면 다음의 순서대로 설정을 변경해주어야 합니다.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;JDownloader의 &lt;code class=&quot;highlighter-rouge&quot;&gt;Preferences&lt;/code&gt; 선택&lt;/li&gt;
-  &lt;li&gt;Tray Icon 밑의 &lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced Settings&lt;/code&gt; 선택&lt;/li&gt;
-  &lt;li&gt;상단에 &lt;code class=&quot;highlighter-rouge&quot;&gt;BrowserCaptchaSolver.browsercommandline&lt;/code&gt; 값으로 검색&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Value&lt;/code&gt; 에 &lt;code class=&quot;highlighter-rouge&quot;&gt;[&quot;open&quot;,&quot;/Applications/Google Chrome.app&quot;,&quot;--args&quot;,&quot;%s&quot;]&lt;/code&gt; 값을 지정&lt;/li&gt;
+  &lt;li&gt;JDownloader의 &lt;code&gt;Preferences&lt;/code&gt; 선택&lt;/li&gt;
+  &lt;li&gt;Tray Icon 밑의 &lt;code&gt;Advanced Settings&lt;/code&gt; 선택&lt;/li&gt;
+  &lt;li&gt;상단에 &lt;code&gt;BrowserCaptchaSolver.browsercommandline&lt;/code&gt; 값으로 검색&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Value&lt;/code&gt; 에 &lt;code&gt;[&quot;open&quot;,&quot;/Applications/Google Chrome.app&quot;,&quot;--args&quot;,&quot;%s&quot;]&lt;/code&gt; 값을 지정&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/5039d5e8ba6c325b6eb20edd075c4b34/001.png&quot; alt=&quot;Preferences&quot; height=&quot;600px&quot; /&gt;&lt;/p&gt;
@@ -36,34 +159,34 @@
 
 &lt;p&gt;&lt;strong&gt;아!!! JDownloader를 사용하면 유튜브 재생목록을 한 방에 다운로드 할 수 있는건 아시지요???&lt;/strong&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Mac" /><category term="JDownloader" /><category term="Chrome" /><summary type="html">맥에서 Jdownloader를 사용하면서 캡차 플러그인이 적용된 크롬을 사용하는 방법입니다.</summary></entry><entry><title type="html">파워셀에서 임시 파일들을 제거하는 방법</title><link href="https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7" rel="alternate" type="text/html" title="파워셀에서 임시 파일들을 제거하는 방법" /><published>2018-06-25T01:49:59+09:00</published><updated>2018-06-25T01:49:59+09:00</updated><id>https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7</id><content type="html" xml:base="https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7">&lt;p&gt;가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다.&lt;/p&gt;
 
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;&amp;lt;#
+&lt;pre&gt;&lt;code class=&quot;language-powershell&quot;&gt;&amp;lt;#
 	Cleaning Temporary Files
-#&amp;gt;&lt;/span&gt;
+#&amp;gt;
 
-&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;GoDir&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TargetDir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; Moving to &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TargetDir&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;Set-Location&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$TargetDir&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+function GoDir($TargetDir)
+{
+	echo &quot;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; Moving to $TargetDir&quot;
+	Set-Location $TargetDir
+}
 
-&lt;span class=&quot;nv&quot;&gt;$CurDir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Get-Item&lt;/span&gt; -Path &lt;span class=&quot;s2&quot;&gt;&quot;.\&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.FullName
+$CurDir = (Get-Item -Path &quot;.\&quot;).FullName
 
-GoDir&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;C:\Windows\Temp&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;Remove-Item&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; -recurse -force
+GoDir(&quot;C:\Windows\Temp&quot;)
+Remove-Item * -recurse -force
 
-GoDir&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;C:\Windows\Prefetch&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;Remove-Item&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; -recurse -force
+GoDir(&quot;C:\Windows\Prefetch&quot;)
+Remove-Item * -recurse -force
 
-GoDir&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;C:\Windows\SoftwareDistribution&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;Remove-Item&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.\Download\*&quot;&lt;/span&gt; -recurse -force
+GoDir(&quot;C:\Windows\SoftwareDistribution&quot;)
+Remove-Item &quot;.\Download\*&quot; -recurse -force
 
 
-GoDir&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;C:\Users&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;Remove-Item&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.\*\Appdata\Local\Temp\*&quot;&lt;/span&gt; -recurse -force
+GoDir(&quot;C:\Users&quot;)
+Remove-Item &quot;.\*\Appdata\Local\Temp\*&quot; -recurse -force
 
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Return to &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$CurDir&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;Set-Location&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$CurDir&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Sangyong Bae</name></author><category term="Windows" /><category term="PowerShell" /><category term="Temporary Files" /><summary type="html">가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다.</summary></entry><entry><title type="html">터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법</title><link href="https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75" rel="alternate" type="text/html" title="터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법" /><published>2018-06-25T01:49:59+09:00</published><updated>2018-06-25T01:49:59+09:00</updated><id>https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75</id><content type="html" xml:base="https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75">&lt;h1 id=&quot;이글은-아래-주소를-참고하여-작성하였습니다&quot;&gt;이글은 아래 주소를 참고하여 작성하였습니다.&lt;/h1&gt;
+echo &quot;Return to $CurDir&quot;
+Set-Location $CurDir
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Windows" /><category term="PowerShell" /><category term="Temporary Files" /><summary type="html">가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다.</summary></entry><entry><title type="html">터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법</title><link href="https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75" rel="alternate" type="text/html" title="터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법" /><published>2018-06-25T01:49:59+09:00</published><updated>2018-06-25T01:49:59+09:00</updated><id>https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75</id><content type="html" xml:base="https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75">&lt;h1 id=&quot;이글은-아래-주소를-참고하여-작성하였습니다&quot;&gt;이글은 아래 주소를 참고하여 작성하였습니다.&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.imore.com/how-use-sudo-your-mac-touch-id&quot;&gt;How to use sudo with Touch ID on your Mac&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;터미널에서 sudo 명령을 사용하는 경우 일반적으로 키보드를 통해 암호를 입력하는 방식을 사용합니다.&lt;/p&gt;
@@ -74,10 +197,10 @@ GoDir&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;
 &lt;p&gt; &lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;파인더에서 이동(&lt;code class=&quot;highlighter-rouge&quot;&gt;COMMAND&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;SHIFT&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;G&lt;/code&gt;)하기로 /etc/pam.d/sudo 파일로 이동&lt;/p&gt;
+    &lt;p&gt;파인더에서 이동(&lt;code&gt;COMMAND&lt;/code&gt; + &lt;code&gt;SHIFT&lt;/code&gt; + &lt;code&gt;G&lt;/code&gt;)하기로 /etc/pam.d/sudo 파일로 이동&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;정보창(&lt;code class=&quot;highlighter-rouge&quot;&gt;COMMAND&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;I&lt;/code&gt;)을 열기&lt;/p&gt;
+    &lt;p&gt;정보창(&lt;code&gt;COMMAND&lt;/code&gt; + &lt;code&gt;I&lt;/code&gt;)을 열기&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;좌측 하단의 열쇠모양의 잠금 아이콘을 클릭해서 잠금 해제&lt;/p&gt;
@@ -91,21 +214,21 @@ GoDir&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;
   &lt;li&gt;
     &lt;p&gt;텍스트 편집 프로그램으로 sudo 파일을 오픈&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;auth       sufficient     pam_tid.so&lt;/code&gt; 내용을 두번째 줄에 붙여넣기
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# sudo: auth account password session
+  &lt;li&gt;&lt;code&gt;auth       sufficient     pam_tid.so&lt;/code&gt; 내용을 두번째 줄에 붙여넣기
+    &lt;pre&gt;&lt;code&gt;# sudo: auth account password session
 auth       sufficient     pam_tid.so
 auth       sufficient     pam_smartcard.so
 auth       required       pam_opendirectory.so
 account    required       pam_permit.so
 password   required       pam_deny.so
 session    required       pam_permit.so
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;sudo 파일을 저장하고 닫기&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;정보창(&lt;code class=&quot;highlighter-rouge&quot;&gt;COMMAND&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;I&lt;/code&gt;)을 열기&lt;/p&gt;
+    &lt;p&gt;정보창(&lt;code&gt;COMMAND&lt;/code&gt; + &lt;code&gt;I&lt;/code&gt;)을 열기&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;권한을 &lt;strong&gt;Read Only&lt;/strong&gt;로 변경하고 잠금 아이콘을 클릭해서 다시 잠금&lt;/li&gt;
 &lt;/ol&gt;
@@ -137,111 +260,36 @@ FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있
 &lt;ol&gt;
   &lt;li&gt;Node 설치합니다. 보통 npm도 같이 설치됨&lt;/li&gt;
   &lt;li&gt;걸프를 전역으로 설치합니다.
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  npm install gulp-cli &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;  npm install gulp-cli -g
+&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Jekyll Source Folder&lt;/strong&gt;로 이동합니다. gulpfile.js 파일이 있는 위치입니다.&lt;/li&gt;
-  &lt;li&gt;패키지를 설치합니다. &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; 혹은 &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install -save-dev gulp gulp-util&lt;/code&gt; 명령을 사용하면 됩니다.&lt;/li&gt;
+  &lt;li&gt;패키지를 설치합니다. &lt;code&gt;npm install&lt;/code&gt; 혹은 &lt;code&gt;npm install -save-dev gulp gulp-util&lt;/code&gt; 명령을 사용하면 됩니다.&lt;/li&gt;
   &lt;li&gt;이제 명령창에서 gulp를 입력하면 프로그램이 실행되고 변경된 css를 감지해서 minifiy 합니다. minify된 css는 built 폴더로 저장됩니다.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/1563133/40760528-272c1c6a-64d2-11e8-80c8-af1108b9b761.png&quot; alt=&quot;gulp 동작 샘플&quot; /&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="jekyll" /><category term="CSS" /><category term="GULP" /><summary type="html">Jekyll에서 Gulp 사용하는 방법   FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다.</summary></entry><entry><title type="html">빈 디렉토리를 git에 추가하는 방법</title><link href="https://kiros33.github.io/20180523001415-1fc3cd5dbab80eb9671a3e2dbfaddb6e" rel="alternate" type="text/html" title="빈 디렉토리를 git에 추가하는 방법" /><published>2018-05-23T00:18:07+09:00</published><updated>2018-05-23T00:18:07+09:00</updated><id>https://kiros33.github.io/20180523001415-1fc3cd5dbab80eb9671a3e2dbfaddb6e</id><content type="html" xml:base="https://kiros33.github.io/20180523001415-1fc3cd5dbab80eb9671a3e2dbfaddb6e">&lt;p&gt;obj 혹은 lib 디렉토리 처럼 빌드에 필요한 경우 사용하지만 버전 관리에는 넣고 싶지 않은 경우가 있습니다.&lt;/p&gt;
 
-&lt;p&gt;이럴땐 &lt;code class=&quot;highlighter-rouge&quot;&gt;make clean&lt;/code&gt; 과 같이 불필요한 파일을 제거 한 뒤 &lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt; 및 &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt; 을 하게됩니다.&lt;/p&gt;
+&lt;p&gt;이럴땐 &lt;code&gt;make clean&lt;/code&gt; 과 같이 불필요한 파일을 제거 한 뒤 &lt;code&gt;git add&lt;/code&gt; 및 &lt;code&gt;git commit&lt;/code&gt; 을 하게됩니다.&lt;/p&gt;
 
-&lt;p&gt;하지만 디렉토리가 비어있는 경우 &lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt; 명령으로 추가되지 않습니다. 추가되지 않은 디렉토리를 다음과 같이 다른 개발환경에서 빌드하고자 할 때 &lt;code class=&quot;highlighter-rouge&quot;&gt;No such file or directory&lt;/code&gt; 오류가 발생합니다.&lt;/p&gt;
+&lt;p&gt;하지만 디렉토리가 비어있는 경우 &lt;code&gt;git add&lt;/code&gt; 명령으로 추가되지 않습니다. 추가되지 않은 디렉토리를 다음과 같이 다른 개발환경에서 빌드하고자 할 때 &lt;code&gt;No such file or directory&lt;/code&gt; 오류가 발생합니다.&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;➜  small compiler git:&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; ✗ make
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;➜  small compiler git:(master) ✗ make
 make sc
-make[1]: Entering directory &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;/home/kiros33/Projects/ADDB/poc-yacc/small compiler&lt;span class=&quot;s1&quot;&gt;'
+make[1]: Entering directory `/home/kiros33/Projects/ADDB/poc-yacc/small compiler'
 bison -d src/grammar.y --output=src/grammar.tab.c
 flex -o src/lex.yy.c src/lex.l
 g++ -c -std=gnu++11 -Iinc -o obj/grammar.tab.o src/grammar.tab.c
 Assembler messages:
-Fatal error: can'&lt;/span&gt;t create obj/grammar.tab.o: No such file or directory
-make[1]: &lt;span class=&quot;k&quot;&gt;***&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;obj/grammar.tab.o] Error 1
-make[1]: Leaving directory &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;/home/kiros33/Projects/ADDB/poc-yacc/small compiler&lt;span class=&quot;s1&quot;&gt;'
+Fatal error: can't create obj/grammar.tab.o: No such file or directory
+make[1]: *** [obj/grammar.tab.o] Error 1
+make[1]: Leaving directory `/home/kiros33/Projects/ADDB/poc-yacc/small compiler'
 make: *** [all] Error 2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;일일이 mkdir 해줄 수 없는 일이고 굳이 불필요한 파일을 추가할 수도 없습니다. 이럴 땐 비어있는 디렉토리 전체를 찾아서 &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; 파일을 추가해주면 해결됩니다.&lt;/p&gt;
+&lt;p&gt;일일이 mkdir 해줄 수 없는 일이고 굳이 불필요한 파일을 추가할 수도 없습니다. 이럴 땐 비어있는 디렉토리 전체를 찾아서 &lt;code&gt;.gitignore&lt;/code&gt; 파일을 추가해주면 해결됩니다.&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-name&lt;/span&gt; .git &lt;span class=&quot;nt&quot;&gt;-prune&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-type&lt;/span&gt; d &lt;span class=&quot;nt&quot;&gt;-empty&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-exec&lt;/span&gt; touch &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt;/.gitignore &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Sangyong Bae</name></author><category term="git" /><summary type="html">obj 혹은 lib 디렉토리 처럼 빌드에 필요한 경우 사용하지만 버전 관리에는 넣고 싶지 않은 경우가 있습니다.</summary></entry><entry><title type="html">두번째 글</title><link href="https://kiros33.github.io/20180518125941-54b9abca45f4b601e56718739fd46ec5" rel="alternate" type="text/html" title="두번째 글" /><published>2018-05-18T13:25:07+09:00</published><updated>2018-05-18T13:25:07+09:00</updated><id>https://kiros33.github.io/20180518125941-54b9abca45f4b601e56718739fd46ec5</id><content type="html" xml:base="https://kiros33.github.io/20180518125941-54b9abca45f4b601e56718739fd46ec5">&lt;p&gt;Hey! Welcome to Ghost, it’s great to have you :)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;find . -name .git -prune -o -type d -empty -exec touch {}/.gitignore \;
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="git" /><summary type="html">obj 혹은 lib 디렉토리 처럼 빌드에 필요한 경우 사용하지만 버전 관리에는 넣고 싶지 않은 경우가 있습니다.</summary></entry><entry><title type="html">두번째 글</title><link href="https://kiros33.github.io/20180518125941-54b9abca45f4b601e56718739fd46ec5" rel="alternate" type="text/html" title="두번째 글" /><published>2018-05-18T13:25:07+09:00</published><updated>2018-05-18T13:25:07+09:00</updated><id>https://kiros33.github.io/20180518125941-54b9abca45f4b601e56718739fd46ec5</id><content type="html" xml:base="https://kiros33.github.io/20180518125941-54b9abca45f4b601e56718739fd46ec5">&lt;p&gt;Hey! Welcome to Ghost, it’s great to have you :)&lt;/p&gt;
 
-&lt;p&gt;while :; do clear; ls *.html; sleep 1; done&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="일상" /><summary type="html">Hey! Welcome to Ghost, it’s great to have you :)</summary></entry><entry><title type="html">맥에서 GitHub Page와 Jekyll 연동한 블로깅 시작하기</title><link href="https://kiros33.github.io/20180517215548-d0031171c9d2b279074870e10164cfd1" rel="alternate" type="text/html" title="맥에서 GitHub Page와 Jekyll 연동한 블로깅 시작하기" /><published>2018-05-17T21:55:48+09:00</published><updated>2018-05-17T21:55:48+09:00</updated><id>https://kiros33.github.io/20180517215548-d0031171c9d2b279074870e10164cfd1</id><content type="html" xml:base="https://kiros33.github.io/20180517215548-d0031171c9d2b279074870e10164cfd1">&lt;h3 id=&quot;최초의-블로깅&quot;&gt;최초의 블로깅&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;GitHub&lt;/strong&gt;와 &lt;strong&gt;Jekyll&lt;/strong&gt;을 연동하여 블로깅을 시작함&lt;/p&gt;
-
-&lt;p&gt;javascript highlight&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;syntaxHighlight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Hello World'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;agent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;navigator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userAgent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_iPhone&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_chrome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;iphone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;_iPhone&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;chrome&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;_chrome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;bash highlight&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;➜  kiros33.github.io git:&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; git push
-Counting objects: 6, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-Delta compression using up to 4 threads.
-Compressing objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;6/6&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-Writing objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;6/6&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, 46.26 KiB | 23.13 MiB/s, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-Total 6 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta 4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, reused 0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-remote: Resolving deltas: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;4/4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, completed with 4 &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;objects.
-To github.com:kiros33/kiros33.github.io.git
-   796e219..a570287  master -&amp;gt; master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;python highlight&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;base64&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;error_handle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'[+] use: $python Base64EnDecoder.py -e [file] -o [file]'&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'[+] use: $python Base64EnDecoder.py -d [file] -o [file]'&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;error_handle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'rb'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'[*] error: file does NOT exist.'&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'-e'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base64&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b64encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'-d'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base64&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b64decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'[*] error: input option is &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;-e&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; or &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;-d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.'&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;error_handle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'[*] error: incorrect padding'&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'-o'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'wb'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'[*] error: output option is &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;-o&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.'&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;error_handle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Sangyong Bae</name></author><category term="macOS" /><category term="GitHub" /><category term="Jekyll" /><summary type="html">최초의 블로깅</summary></entry></feed>
+&lt;p&gt;while :; do clear; ls *.html; sleep 1; done&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="일상" /><summary type="html">Hey! Welcome to Ghost, it’s great to have you :)</summary></entry></feed>

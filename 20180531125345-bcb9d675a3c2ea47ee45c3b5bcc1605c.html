@@ -183,11 +183,11 @@ FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있
 <ol>
   <li>Node 설치합니다. 보통 npm도 같이 설치됨</li>
   <li>걸프를 전역으로 설치합니다.
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  npm install gulp-cli <span class="nt">-g</span>
-</code></pre></div>    </div>
+    <pre><code class="language-bash">  npm install gulp-cli -g
+</code></pre>
   </li>
   <li><strong>Jekyll Source Folder</strong>로 이동합니다. gulpfile.js 파일이 있는 위치입니다.</li>
-  <li>패키지를 설치합니다. <code class="highlighter-rouge">npm install</code> 혹은 <code class="highlighter-rouge">npm install -save-dev gulp gulp-util</code> 명령을 사용하면 됩니다.</li>
+  <li>패키지를 설치합니다. <code>npm install</code> 혹은 <code>npm install -save-dev gulp gulp-util</code> 명령을 사용하면 됩니다.</li>
   <li>이제 명령창에서 gulp를 입력하면 프로그램이 실행되고 변경된 css를 감지해서 minifiy 합니다. minify된 css는 built 폴더로 저장됩니다.</li>
 </ol>
 
@@ -465,7 +465,7 @@ FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://kiros33.github.io/">배저씨네</a> &copy; 2018</section>
+                <section class="copyright"><a href="https://kiros33.github.io/">배저씨네</a> &copy; 2019</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
@@ -504,14 +504,6 @@ FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있
         </div>
     
 
-    <!-- highlight.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
-    <script>$(document).ready(function() {
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
-      });
-    });</script>
-
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->
     <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -520,6 +512,71 @@ FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있
     </script>
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+    <!-- highlight.js -->
+    <!--
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+    -->
+
+        <!-- prism.js 
+
+    CDN: https://cdnjs.com/libraries/prism
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-dark.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-highlight/prism-line-highlight.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/prism.css" />
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
+
+    <!-- prism.js
+
+    CDN: https://cdnjs.com/libraries/prism
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+
+    <script type="text/javascript" src="/assets/js/prism.min.js"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-applescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-asciidoc.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-aspnet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-batch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-css-extras.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-diff.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-git.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-http.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-ini.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-makefile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-objectivec.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-perl.min.js"></script>
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-php-extras.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-php.min.js"></script>
+	-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-powershell.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-properties.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-ruby.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-swift.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-xquery.min.js"></script>
+
 
 
     <!-- Paginator increased to "infinit" in _config.yml -->

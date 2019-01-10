@@ -173,27 +173,27 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <p>obj 혹은 lib 디렉토리 처럼 빌드에 필요한 경우 사용하지만 버전 관리에는 넣고 싶지 않은 경우가 있습니다.</p>
 
-<p>이럴땐 <code class="highlighter-rouge">make clean</code> 과 같이 불필요한 파일을 제거 한 뒤 <code class="highlighter-rouge">git add</code> 및 <code class="highlighter-rouge">git commit</code> 을 하게됩니다.</p>
+<p>이럴땐 <code>make clean</code> 과 같이 불필요한 파일을 제거 한 뒤 <code>git add</code> 및 <code>git commit</code> 을 하게됩니다.</p>
 
-<p>하지만 디렉토리가 비어있는 경우 <code class="highlighter-rouge">git add</code> 명령으로 추가되지 않습니다. 추가되지 않은 디렉토리를 다음과 같이 다른 개발환경에서 빌드하고자 할 때 <code class="highlighter-rouge">No such file or directory</code> 오류가 발생합니다.</p>
+<p>하지만 디렉토리가 비어있는 경우 <code>git add</code> 명령으로 추가되지 않습니다. 추가되지 않은 디렉토리를 다음과 같이 다른 개발환경에서 빌드하고자 할 때 <code>No such file or directory</code> 오류가 발생합니다.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>➜  small compiler git:<span class="o">(</span>master<span class="o">)</span> ✗ make
+<pre><code class="language-bash">➜  small compiler git:(master) ✗ make
 make sc
-make[1]: Entering directory <span class="sb">`</span>/home/kiros33/Projects/ADDB/poc-yacc/small compiler<span class="s1">'
+make[1]: Entering directory `/home/kiros33/Projects/ADDB/poc-yacc/small compiler'
 bison -d src/grammar.y --output=src/grammar.tab.c
 flex -o src/lex.yy.c src/lex.l
 g++ -c -std=gnu++11 -Iinc -o obj/grammar.tab.o src/grammar.tab.c
 Assembler messages:
-Fatal error: can'</span>t create obj/grammar.tab.o: No such file or directory
-make[1]: <span class="k">***</span> <span class="o">[</span>obj/grammar.tab.o] Error 1
-make[1]: Leaving directory <span class="sb">`</span>/home/kiros33/Projects/ADDB/poc-yacc/small compiler<span class="s1">'
+Fatal error: can't create obj/grammar.tab.o: No such file or directory
+make[1]: *** [obj/grammar.tab.o] Error 1
+make[1]: Leaving directory `/home/kiros33/Projects/ADDB/poc-yacc/small compiler'
 make: *** [all] Error 2
-</span></code></pre></div></div>
+</code></pre>
 
-<p>일일이 mkdir 해줄 수 없는 일이고 굳이 불필요한 파일을 추가할 수도 없습니다. 이럴 땐 비어있는 디렉토리 전체를 찾아서 <code class="highlighter-rouge">.gitignore</code> 파일을 추가해주면 해결됩니다.</p>
+<p>일일이 mkdir 해줄 수 없는 일이고 굳이 불필요한 파일을 추가할 수도 없습니다. 이럴 땐 비어있는 디렉토리 전체를 찾아서 <code>.gitignore</code> 파일을 추가해주면 해결됩니다.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find <span class="nb">.</span> <span class="nt">-name</span> .git <span class="nt">-prune</span> <span class="nt">-o</span> <span class="nt">-type</span> d <span class="nt">-empty</span> <span class="nt">-exec</span> touch <span class="o">{}</span>/.gitignore <span class="se">\;</span>
-</code></pre></div></div>
+<pre><code class="language-bash">find . -name .git -prune -o -type d -empty -exec touch {}/.gitignore \;
+</code></pre>
 
                     <!-- Google adsense code -->
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -470,7 +470,7 @@ while :; do clear; ls *.html; sleep 1; done
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://kiros33.github.io/">배저씨네</a> &copy; 2018</section>
+                <section class="copyright"><a href="https://kiros33.github.io/">배저씨네</a> &copy; 2019</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
@@ -509,14 +509,6 @@ while :; do clear; ls *.html; sleep 1; done
         </div>
     
 
-    <!-- highlight.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
-    <script>$(document).ready(function() {
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
-      });
-    });</script>
-
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->
     <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -525,6 +517,71 @@ while :; do clear; ls *.html; sleep 1; done
     </script>
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+    <!-- highlight.js -->
+    <!--
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+    -->
+
+        <!-- prism.js 
+
+    CDN: https://cdnjs.com/libraries/prism
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-dark.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-highlight/prism-line-highlight.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/prism.css" />
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
+
+    <!-- prism.js
+
+    CDN: https://cdnjs.com/libraries/prism
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+
+    <script type="text/javascript" src="/assets/js/prism.min.js"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-applescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-asciidoc.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-aspnet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-batch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-css-extras.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-diff.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-git.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-http.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-ini.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-makefile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-objectivec.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-perl.min.js"></script>
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-php-extras.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-php.min.js"></script>
+	-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-powershell.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-properties.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-ruby.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-swift.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-xquery.min.js"></script>
+
 
 
     <!-- Paginator increased to "infinit" in _config.yml -->

@@ -182,76 +182,76 @@ into the {body} of the default.hbs template -->
 
 <p>javascript highlight</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">syntaxHighlight</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span> <span class="p">{</span>
-   <span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="s1">'Hello World'</span><span class="p">;</span>
-   <span class="kd">var</span> <span class="nx">bar</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<pre><code class="language-javascript">function syntaxHighlight(code) {
+   var foo = 'Hello World';
+   var bar = 100;
+}
+</code></pre>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">agent</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
-        <span class="kd">var</span> <span class="nx">_iPhone</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">_chrome</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">agent</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">"iphone"</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">_iPhone</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">agent</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">"chrome"</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">_chrome</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-        <span class="p">}</span>
-</code></pre></div></div>
+<pre><code class="language-javascript">var agent = navigator.userAgent.toLowerCase();
+        var _iPhone = false;
+        var _chrome = false;
+        var result = false;
+        if (agent.indexOf("iphone") != -1) {
+            _iPhone = true;
+        }
+        if (agent.indexOf("chrome") != -1) {
+            _chrome = true;
+        }
+</code></pre>
 
 <p>bash highlight</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>➜  kiros33.github.io git:<span class="o">(</span>master<span class="o">)</span> git push
-Counting objects: 6, <span class="k">done</span><span class="nb">.</span>
+<pre><code class="language-bash">➜  kiros33.github.io git:(master) git push
+Counting objects: 6, done.
 Delta compression using up to 4 threads.
-Compressing objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
-Writing objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, 46.26 KiB | 23.13 MiB/s, <span class="k">done</span><span class="nb">.</span>
-Total 6 <span class="o">(</span>delta 4<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
-remote: Resolving deltas: 100% <span class="o">(</span>4/4<span class="o">)</span>, completed with 4 <span class="nb">local </span>objects.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 46.26 KiB | 23.13 MiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 To github.com:kiros33/kiros33.github.io.git
    796e219..a570287  master -&gt; master
-</code></pre></div></div>
+</code></pre>
 
 <p>python highlight</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/python</span>
+<pre><code class="language-python">#!/usr/bin/python
 
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">base64</span>
+import sys
+import base64
 
-<span class="k">def</span> <span class="nf">error_handle</span><span class="p">():</span>
-    <span class="k">print</span> <span class="s">'[+] use: $python Base64EnDecoder.py -e [file] -o [file]'</span>
-    <span class="k">print</span> <span class="s">'[+] use: $python Base64EnDecoder.py -d [file] -o [file]'</span>
-    <span class="n">sys</span><span class="o">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+def error_handle():
+    print '[+] use: $python Base64EnDecoder.py -e [file] -o [file]'
+    print '[+] use: $python Base64EnDecoder.py -d [file] -o [file]'
+    sys.exit(1)
 
-<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="n">error_handle</span><span class="p">()</span>
+if len(sys.argv) != 5:
+    error_handle()
 
-<span class="k">try</span><span class="p">:</span>
-    <span class="nb">input</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s">'rb'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s">'[*] error: file does NOT exist.'</span>
-    <span class="n">sys</span><span class="o">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+try:
+    input = open(sys.argv[2], 'rb').read()
+except:
+    print '[*] error: file does NOT exist.'
+    sys.exit(1)
 
-<span class="k">try</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">'-e'</span><span class="p">:</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s">'-d'</span><span class="p">:</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s">'[*] error: input option is </span><span class="se">\'</span><span class="s">-e</span><span class="se">\'</span><span class="s"> or </span><span class="se">\'</span><span class="s">-d</span><span class="se">\'</span><span class="s">.'</span>
-        <span class="n">error_handle</span><span class="p">()</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s">'[*] error: incorrect padding'</span>
-    <span class="n">sys</span><span class="o">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+try:
+    if sys.argv[1] == '-e':
+        data = base64.b64encode(input)
+    elif sys.argv[1] == '-d':
+        data = base64.b64decode(input)
+    else:
+        print '[*] error: input option is \'-e\' or \'-d\'.'
+        error_handle()
+except:
+    print '[*] error: incorrect padding'
+    sys.exit(1)
 
-<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s">'-o'</span><span class="p">:</span>
-    <span class="n">output</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="s">'wb'</span><span class="p">)</span>
-    <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s">'[*] error: output option is </span><span class="se">\'</span><span class="s">-o</span><span class="se">\'</span><span class="s">.'</span>
-    <span class="n">error_handle</span><span class="p">()</span>
-</code></pre></div></div>
+if sys.argv[3] == '-o':
+    output = open(sys.argv[4], 'wb')
+    output.write(data)
+else:
+    print '[*] error: output option is \'-o\'.'
+    error_handle()
+</code></pre>
 
 
                     <!-- Google adsense code -->
@@ -528,7 +528,7 @@ while :; do clear; ls *.html; sleep 1; done</p>
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://kiros33.github.io/">배저씨네</a> &copy; 2018</section>
+                <section class="copyright"><a href="https://kiros33.github.io/">배저씨네</a> &copy; 2019</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
@@ -567,14 +567,6 @@ while :; do clear; ls *.html; sleep 1; done</p>
         </div>
     
 
-    <!-- highlight.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
-    <script>$(document).ready(function() {
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
-      });
-    });</script>
-
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->
     <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -583,6 +575,71 @@ while :; do clear; ls *.html; sleep 1; done</p>
     </script>
     <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
     <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+    <!-- highlight.js -->
+    <!--
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+    -->
+
+        <!-- prism.js 
+
+    CDN: https://cdnjs.com/libraries/prism
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-dark.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-highlight/prism-line-highlight.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/prism.css" />
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" />
+
+    <!-- prism.js
+
+    CDN: https://cdnjs.com/libraries/prism
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+
+    <script type="text/javascript" src="/assets/js/prism.min.js"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-applescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-asciidoc.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-aspnet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-batch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-css-extras.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-diff.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-git.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-http.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-ini.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-makefile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-objectivec.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-perl.min.js"></script>
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-php-extras.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-php.min.js"></script>
+	-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-powershell.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-properties.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-ruby.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-sql.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-swift.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-xquery.min.js"></script>
+
 
 
     <!-- Paginator increased to "infinit" in _config.yml -->
