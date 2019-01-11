@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2019-01-11T10:55:56+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">오라클 라이브 SQL 소개</title><link href="https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74" rel="alternate" type="text/html" title="오라클 라이브 SQL 소개" /><published>2019-01-10T13:57:05+09:00</published><updated>2019-01-10T13:57:05+09:00</updated><id>https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74</id><content type="html" xml:base="https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74">&lt;p&gt;&lt;strong&gt;Oracle Live SQL을 소개합니다.&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2019-01-11T12:40:22+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">오라클 라이브 SQL 소개</title><link href="https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74" rel="alternate" type="text/html" title="오라클 라이브 SQL 소개" /><published>2019-01-10T13:57:05+09:00</published><updated>2019-01-10T13:57:05+09:00</updated><id>https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74</id><content type="html" xml:base="https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74">&lt;p&gt;&lt;strong&gt;Oracle Live SQL을 소개합니다.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;오라클&lt;/strong&gt;을 설치하고 &lt;code&gt;Sample schema&lt;/code&gt;를 추가하는 것은 개발자라면 기본으로 할 수 있어야 할 것입니다!&lt;/p&gt;
 
@@ -30,7 +30,7 @@
 
     &lt;p&gt;&lt;a href=&quot;https://livesql.oracle.com&quot; target=&quot;_blank&quot;&gt;https://livesql.oracle.com&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/001.png&quot; caption=&quot;Homepage Main&quot;&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/001.840.jpg&quot; alt=&quot;Homepage Main&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/001.png&quot; caption=&quot;Homepage Main&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Homepage Main&quot; data-echo=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/001.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;code&gt;SQL Worksheet&lt;/code&gt; 메뉴를 선택합니다. 이때 &lt;u&gt;사이트에 로그인이 필요&lt;/u&gt;합니다.&lt;/p&gt;
@@ -49,7 +49,7 @@
     &lt;pre&gt;&lt;code class=&quot;language-sql&quot;&gt;ORA-00942: table or view does not exist
 &lt;/code&gt;&lt;/pre&gt;
 
-    &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/002.png&quot; caption=&quot;SQL 실행&quot;&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/002.840.jpg&quot; alt=&quot;SQL 실행&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/002.png&quot; caption=&quot;SQL 실행&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;SQL 실행&quot; data-echo=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/002.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -62,19 +62,19 @@
       &lt;li&gt;
         &lt;p&gt;&lt;code&gt;EMP and DEPT&lt;/code&gt; 라이브러리 선택&lt;/p&gt;
 
-        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/003.png&quot; caption=&quot;EMP and DEPT 라이브러리 선택&quot;&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/003.840.jpg&quot; alt=&quot;EMP and DEPT 라이브러리 선택&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/003.png&quot; caption=&quot;EMP and DEPT 라이브러리 선택&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;EMP and DEPT 라이브러리 선택&quot; data-echo=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/003.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;&lt;code&gt;Run Script&lt;/code&gt; 버튼을 눌러 스크립트 실행하면 수행 여부를 확인합니다. &lt;code&gt;Perform Actions(s)&lt;/code&gt; 버튼을 누르세요.&lt;/p&gt;
 
-        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/004.png&quot; caption=&quot;스크립트 실행&quot;&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/004.840.jpg&quot; alt=&quot;스크립트 실행&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/004.png&quot; caption=&quot;스크립트 실행&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;스크립트 실행&quot; data-echo=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/004.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/005.png&quot; caption=&quot;스크립트 확인&quot;&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/005.840.jpg&quot; alt=&quot;스크립트 확인&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/005.png&quot; caption=&quot;스크립트 확인&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;스크립트 확인&quot; data-echo=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/005.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;&lt;code&gt;SQL Worksheet&lt;/code&gt; 버튼을 눌러 SQL 창으로 이동합니다.&lt;/p&gt;
 
-        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/006.png&quot; caption=&quot;스크립트 완료&quot;&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/006.840.jpg&quot; alt=&quot;스크립트 완료&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/006.png&quot; caption=&quot;스크립트 완료&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;스크립트 완료&quot; data-echo=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/006.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -85,12 +85,12 @@
       &lt;li&gt;
         &lt;p&gt;이제 &lt;code&gt;emp&lt;/code&gt;와 &lt;code&gt;dept&lt;/code&gt; 테이블이 생성되어 SQL문을 수행할 수 있습니다.&lt;/p&gt;
 
-        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/007.png&quot; caption=&quot;select emp table&quot;&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/007.840.jpg&quot; alt=&quot;select emp table&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/007.png&quot; caption=&quot;select emp table&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;select emp table&quot; data-echo=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/007.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;수행 할 SQL을 선택하고 &lt;code&gt;Run&lt;/code&gt; 버튼을 누르면 선택된 명령만 수행됩니다.&lt;/p&gt;
 
-        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/008.png&quot; caption=&quot;select dept table&quot;&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/008.840.jpg&quot; alt=&quot;select dept table&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/008.png&quot; caption=&quot;select dept table&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;select dept table&quot; data-echo=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/008.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -104,11 +104,11 @@
     &lt;ul&gt;
       &lt;li&gt;
         &lt;p&gt;&lt;code&gt;Schema&lt;/code&gt; 메뉴를 선택하면 &lt;code&gt;My Schema&lt;/code&gt; 가 기본 선택되어있습니다. 콤보 박스를 눌러보면 다음과 같이 이미 등록된 여러 스키마를 볼 수 있습니다.
-&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/009.png&quot; caption=&quot;Schema 선택&quot;&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/009.840.jpg&quot; alt=&quot;Schema 선택&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/009.png&quot; caption=&quot;Schema 선택&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Schema 선택&quot; data-echo=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/009.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;테이블 이름 앞에 스키마 이름을 추가해서 SQL문을 작성하면 기존에 존재하는 스키마를 모두 사용할 수 있습니다.
-&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/010.png&quot; caption=&quot;Schema Select&quot;&gt;&lt;img src=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/010.840.jpg&quot; alt=&quot;Schema Select&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/010.png&quot; caption=&quot;Schema Select&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Schema Select&quot; data-echo=&quot;assets/images/42c48740a84b48f6336e2d7585a56f74/010.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
