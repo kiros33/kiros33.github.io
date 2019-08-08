@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2019-02-14T19:36:08+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">불법주정차 문자 알림 서비스</title><link href="https://kiros33.github.io/20190214185525-5db75118bede859338ec6b48d5519bbc" rel="alternate" type="text/html" title="불법주정차 문자 알림 서비스" /><published>2019-02-14T18:55:13+09:00</published><updated>2019-02-14T18:55:13+09:00</updated><id>https://kiros33.github.io/20190214185525-5db75118bede859338ec6b48d5519bbc</id><content type="html" xml:base="https://kiros33.github.io/20190214185525-5db75118bede859338ec6b48d5519bbc">&lt;p&gt;지역별로 불법주정차 문자 알림 서비스 가입방법입니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2019-08-08T15:25:39+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">크롬 브라우저 종료시 다시 로그인을 해야하는 불편함을 해결하는 방법</title><link href="https://kiros33.github.io/20190808123219-25631e451a43a17650c2a06f03bf01b0" rel="alternate" type="text/html" title="크롬 브라우저 종료시 다시 로그인을 해야하는 불편함을 해결하는 방법" /><published>2019-02-14T18:55:13+09:00</published><updated>2019-02-14T18:55:13+09:00</updated><id>https://kiros33.github.io/20190808123219-25631e451a43a17650c2a06f03bf01b0</id><content type="html" xml:base="https://kiros33.github.io/20190808123219-25631e451a43a17650c2a06f03bf01b0">&lt;p&gt;크롬 브라우저 종료시 로컬 데이터를 삭제하는 옵션 해제하기&lt;br /&gt;
+(Keep local data only until you quit your brower)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;크롬 브라우저를 종료한 다음 다시 실행하면
+동기화를 위한 로그인 및 각 사이트에 로그인했던 정보가
+모두 사라지는 경우에 적용하는 방법입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;이미지를 클릭하면 원본 크기로 보실 수 있습니다.&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1) 크롬을 실행하고 설정(Settings)으로 들어갑니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;사이트 설정(Site Settings) 항목 선택&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;assets/images/25631e451a43a17650c2a06f03bf01b0/001.png&quot; caption=&quot;Settings&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Settings&quot; data-echo=&quot;assets/images/25631e451a43a17650c2a06f03bf01b0/001.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2) 사이트 설정&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;쿠키(Cookies) 항목 선택&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;assets/images/25631e451a43a17650c2a06f03bf01b0/002.png&quot; caption=&quot;Site Settings&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Site Settings&quot; data-echo=&quot;assets/images/25631e451a43a17650c2a06f03bf01b0/002.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;3) 쿠키&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;브라우저 종료시까지 로컬 데이터 유지(Keep local data only until you quit your brower) 항목을 끕니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;assets/images/25631e451a43a17650c2a06f03bf01b0/003.png&quot; caption=&quot;Cookies&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Cookies&quot; data-echo=&quot;assets/images/25631e451a43a17650c2a06f03bf01b0/003.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;4) 옵션 해제&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;두세번 정도 종료 → 재실행을 통해 로그인이 유지되는지 확인&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;assets/images/25631e451a43a17650c2a06f03bf01b0/004.png&quot; caption=&quot;Turnoff&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Turnoff&quot; data-echo=&quot;assets/images/25631e451a43a17650c2a06f03bf01b0/004.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;#문자&lt;/code&gt;, &lt;code&gt;#SMS&lt;/code&gt;, &lt;code&gt;#불법주정차&lt;/code&gt;, &lt;code&gt;#생활상식&lt;/code&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Chrome" /><category term="Cookie" /><summary type="html">크롬 브라우저 종료시 로컬 데이터를 삭제하는 옵션 해제하기 (Keep local data only until you quit your brower)</summary></entry><entry><title type="html">불법주정차 문자 알림 서비스</title><link href="https://kiros33.github.io/20190214185525-5db75118bede859338ec6b48d5519bbc" rel="alternate" type="text/html" title="불법주정차 문자 알림 서비스" /><published>2019-02-14T18:55:13+09:00</published><updated>2019-02-14T18:55:13+09:00</updated><id>https://kiros33.github.io/20190214185525-5db75118bede859338ec6b48d5519bbc</id><content type="html" xml:base="https://kiros33.github.io/20190214185525-5db75118bede859338ec6b48d5519bbc">&lt;p&gt;지역별로 불법주정차 문자 알림 서비스 가입방법입니다.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -393,19 +434,4 @@ session    required       pam_permit.so
   &lt;li&gt;&lt;a href=&quot;http://m.kyeonggi.com/?mod=news&amp;amp;act=articleView&amp;amp;idxno=1474180&quot;&gt;경기일보 - 한전, 특고압 전선 매설 ‘쉬쉬’… 부평 삼산동 주민 거센 반발&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://news.joins.com/article/22682616&quot;&gt;중앙일보 - 한전·부천시 ‘스쿨존 특고압선 매설’ 갈등&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.bcmaeil.com/bcmaeil/news/?pageUrl=news_view&amp;amp;section=2&amp;amp;news_num=9081&quot;&gt;부천매일 - 상동신도시 8m 특고압…공청회에서 본 ‘문제의 핵심’&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Sangyong Bae</name></author><category term="부천시" /><summary type="html">부천시 특고압의 학교앞 매설 반대 국민청원에 대한 정보를 공유합니다.</summary></entry><entry><title type="html">JEKYLL에 gulp로 CSS 적용하는 방법;</title><link href="https://kiros33.github.io/20180531125345-bcb9d675a3c2ea47ee45c3b5bcc1605c" rel="alternate" type="text/html" title="JEKYLL에 gulp로 CSS 적용하는 방법;" /><published>2018-05-31T12:55:36+09:00</published><updated>2018-05-31T12:55:36+09:00</updated><id>https://kiros33.github.io/20180531125345-bcb9d675a3c2ea47ee45c3b5bcc1605c</id><content type="html" xml:base="https://kiros33.github.io/20180531125345-bcb9d675a3c2ea47ee45c3b5bcc1605c">&lt;h3 id=&quot;jekyll에서-gulp-사용하는-방법&quot;&gt;Jekyll에서 Gulp 사용하는 방법&lt;/h3&gt;
-&lt;p&gt; &lt;br /&gt;
-FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Node 설치합니다. 보통 npm도 같이 설치됨&lt;/li&gt;
-  &lt;li&gt;걸프를 전역으로 설치합니다.
-    &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;  npm install gulp-cli -g
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Jekyll Source Folder&lt;/strong&gt;로 이동합니다. gulpfile.js 파일이 있는 위치입니다.&lt;/li&gt;
-  &lt;li&gt;패키지를 설치합니다. &lt;code&gt;npm install&lt;/code&gt; 혹은 &lt;code&gt;npm install -save-dev gulp gulp-util&lt;/code&gt; 명령을 사용하면 됩니다.&lt;/li&gt;
-  &lt;li&gt;이제 명령창에서 gulp를 입력하면 프로그램이 실행되고 변경된 css를 감지해서 minifiy 합니다. minify된 css는 built 폴더로 저장됩니다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/1563133/40760528-272c1c6a-64d2-11e8-80c8-af1108b9b761.png&quot; alt=&quot;gulp 동작 샘플&quot; /&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="jekyll" /><category term="CSS" /><category term="GULP" /><summary type="html">Jekyll에서 Gulp 사용하는 방법   FI 개발에 익숙하지 않으시면 CSS 변경 적용이 어려울 수도 있겠습니다.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Sangyong Bae</name></author><category term="부천시" /><summary type="html">부천시 특고압의 학교앞 매설 반대 국민청원에 대한 정보를 공유합니다.</summary></entry></feed>
