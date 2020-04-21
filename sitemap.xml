@@ -303,6 +303,14 @@
   
   
       <url>
+        <loc>https://kiros33.github.io/tag/network/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
         <loc>https://kiros33.github.io/author/kiros33/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -367,6 +375,12 @@
   
   
   
+  
+      <url>
+        <loc>https://kiros33.github.io/20200421095727-d4e967ea248dba1d2ffde4c262b1f576</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
   
       <url>
         <loc>https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579</loc>

@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2020-04-21T18:38:01+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">Run CMD or Powershell as Administrator</title><link href="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579" rel="alternate" type="text/html" title="Run CMD or Powershell as Administrator" /><published>2020-04-21T08:43:54+09:00</published><updated>2020-04-21T08:43:54+09:00</updated><id>https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579</id><content type="html" xml:base="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579">&lt;p&gt;cmd.exe 나 powershell.exe 를 관리자 권한으로 실행하는 방법&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2020-04-21T19:23:13+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">Listening port via Powershell</title><link href="https://kiros33.github.io/20200421095727-d4e967ea248dba1d2ffde4c262b1f576" rel="alternate" type="text/html" title="Listening port via Powershell" /><published>2020-04-21T09:57:27+09:00</published><updated>2020-04-21T09:57:27+09:00</updated><id>https://kiros33.github.io/20200421095727-d4e967ea248dba1d2ffde4c262b1f576</id><content type="html" xml:base="https://kiros33.github.io/20200421095727-d4e967ea248dba1d2ffde4c262b1f576">&lt;p&gt;파워쉘로 포트 열기&lt;br /&gt;
+(Listening port via Powershell)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;참조-사이트&quot;&gt;참조 사이트&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/YSCHGroup/SkyRAT/blob/master/assets/modules/Listen-Port.ps1&quot;&gt;SkyRAT/assets/modules/Listen-Port.ps1&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;별로 고민없이 가져다 접속 테스트에 사용했습니다.
+종종 포트가 열렸는지 확인해야하는데 서버측 포트 바인딩하는게 쉽지 않을 때까 있는데 아주 유용합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;이미지를 클릭하면 원본 크기로 보실 수 있습니다.&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;스크립트-예제&quot;&gt;스크립트 예제&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-powershell&quot;&gt;$port = 24
+$endpoint = new-object System.Net.IPEndPoint ([system.net.ipaddress]::any, $port)    
+$listener = new-object System.Net.Sockets.TcpListener $endpoint
+$listener.server.ReceiveTimeout = 3000
+$listener.start()    
+try {
+    Write-Host &quot;Listening on port $port, press CTRL+C to cancel&quot;
+    While ($true) {
+        if (!$listener.Pending()) {
+            Start-Sleep -Seconds 1; 
+            continue; 
+        }
+        $client = $listener.AcceptTcpClient()
+        $client.client.RemoteEndPoint | Add-Member -NotePropertyName DateTime -NotePropertyValue (get-date) -PassThru
+        $client.close()
+    }
+}
+catch {
+    Write-Error $_          
+}
+finally{
+    $listener.stop()
+    Write-host &quot;Listener Closed Safely&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;실행---포트-대기&quot;&gt;실행 - 포트 대기&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;스크립트를 실행하면 24 포트로 대기
+&lt;a href=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/001.png&quot; caption=&quot;대기&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Listening&quot; data-echo=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/001.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;테스트&quot;&gt;테스트&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;tcping
+&lt;a href=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/002.png&quot; caption=&quot;Tcping 테스트&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Tcping 테스트&quot; data-echo=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/002.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;netcat
+&lt;a href=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/003.png&quot; caption=&quot;Netcat 테스트&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Netcat 테스트&quot; data-echo=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/003.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;powershell
+&lt;a href=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/004.png&quot; caption=&quot;Test-Connection&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Test-Connection&quot; data-echo=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/004.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;종료&quot;&gt;종료&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/005.png&quot; caption=&quot;종료&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Terminate&quot; data-echo=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/005.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;#파워쉘&lt;/code&gt;, &lt;code&gt;#파워셸&lt;/code&gt;, &lt;code&gt;#포트&lt;/code&gt;, &lt;code&gt;#네트워크&lt;/code&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Command" /><category term="Powershell" /><category term="Windows" /><category term="Network" /><summary type="html">파워쉘로 포트 열기 (Listening port via Powershell)</summary></entry><entry><title type="html">Run CMD or Powershell as Administrator</title><link href="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579" rel="alternate" type="text/html" title="Run CMD or Powershell as Administrator" /><published>2020-04-21T08:43:54+09:00</published><updated>2020-04-21T08:43:54+09:00</updated><id>https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579</id><content type="html" xml:base="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579">&lt;p&gt;cmd.exe 나 powershell.exe 를 관리자 권한으로 실행하는 방법&lt;br /&gt;
 (Run cmd.exe or powershell.exe as Administrator)&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -432,55 +493,4 @@ Remove-Item &quot;.\*\Appdata\Local\Temp\*&quot; -recurse -force
 
 echo &quot;Return to $CurDir&quot;
 Set-Location $CurDir
-&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Windows" /><category term="PowerShell" /><category term="Temporary Files" /><summary type="html">가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다.</summary></entry><entry><title type="html">터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법</title><link href="https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75" rel="alternate" type="text/html" title="터미널의 sudo 명령 사용시 맥의 터치아이디를 통해 인증하는 방법" /><published>2018-06-25T01:49:59+09:00</published><updated>2018-06-25T01:49:59+09:00</updated><id>https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75</id><content type="html" xml:base="https://kiros33.github.io/20180625014756-cb9879e0e0e48d1ca070b54896f94a75">&lt;h1 id=&quot;이글은-아래-주소를-참고하여-작성하였습니다&quot;&gt;이글은 아래 주소를 참고하여 작성하였습니다.&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.imore.com/how-use-sudo-your-mac-touch-id&quot;&gt;How to use sudo with Touch ID on your Mac&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;터미널에서 sudo 명령을 사용하는 경우 일반적으로 키보드를 통해 암호를 입력하는 방식을 사용합니다.&lt;/p&gt;
-
-&lt;p&gt;하지만 Touch ID를 내장하고 있는 맥이라면 이를 활용할 수 있는 방법이 있어 소개합니다.&lt;/p&gt;
-
-&lt;h3 id=&quot;macbook-pro-with-touch-id-에서-sudo-명령시-touch-id를-활성화하는-방법&quot;&gt;Macbook Pro with Touch ID 에서 sudo 명령시 Touch ID를 활성화하는 방법&lt;/h3&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;파인더에서 이동(&lt;code&gt;COMMAND&lt;/code&gt; + &lt;code&gt;SHIFT&lt;/code&gt; + &lt;code&gt;G&lt;/code&gt;)하기로 /etc/pam.d/sudo 파일로 이동&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;정보창(&lt;code&gt;COMMAND&lt;/code&gt; + &lt;code&gt;I&lt;/code&gt;)을 열기&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;좌측 하단의 열쇠모양의 잠금 아이콘을 클릭해서 잠금 해제&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;인증정보를 입력하거나 Touch ID로 인증&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;하단의 공유 및 권한(Saring &amp;amp; Permissions) 중 everyone 을 &lt;strong&gt;Read Only&lt;/strong&gt;에서 &lt;strong&gt;Read &amp;amp; Write&lt;/strong&gt; 로 변경&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;텍스트 편집 프로그램으로 sudo 파일을 오픈&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;auth       sufficient     pam_tid.so&lt;/code&gt; 내용을 두번째 줄에 붙여넣기
-    &lt;pre&gt;&lt;code&gt;# sudo: auth account password session
-auth       sufficient     pam_tid.so
-auth       sufficient     pam_smartcard.so
-auth       required       pam_opendirectory.so
-account    required       pam_permit.so
-password   required       pam_deny.so
-session    required       pam_permit.so
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;sudo 파일을 저장하고 닫기&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;정보창(&lt;code&gt;COMMAND&lt;/code&gt; + &lt;code&gt;I&lt;/code&gt;)을 열기&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;권한을 &lt;strong&gt;Read Only&lt;/strong&gt;로 변경하고 잠금 아이콘을 클릭해서 다시 잠금&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;이제 &lt;em&gt;sudo&lt;/em&gt;를 포함한 명령 사용시 Touch ID로 인증이 가능합니다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;늦은시간 귀차니즘으로 스크린샷을 생략하고 작성하였습니다. 질문이 있다면 하단에 댓글로 작성해주시면 답변드리겠습니다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Sangyong Bae</name></author><category term="Mac" /><category term="Terminal" /><category term="sudo" /><summary type="html">이글은 아래 주소를 참고하여 작성하였습니다. How to use sudo with Touch ID on your Mac</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Windows" /><category term="PowerShell" /><category term="Temporary Files" /><summary type="html">가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다.</summary></entry></feed>
