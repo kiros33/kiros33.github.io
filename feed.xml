@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2019-08-08T15:44:17+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">크롬 브라우저 종료시 다시 로그인을 해야하는 불편함을 해결하는 방법</title><link href="https://kiros33.github.io/20190808123219-25631e451a43a17650c2a06f03bf01b0" rel="alternate" type="text/html" title="크롬 브라우저 종료시 다시 로그인을 해야하는 불편함을 해결하는 방법" /><published>2019-08-08T03:32:19+09:00</published><updated>2019-08-08T03:32:19+09:00</updated><id>https://kiros33.github.io/20190808123219-25631e451a43a17650c2a06f03bf01b0</id><content type="html" xml:base="https://kiros33.github.io/20190808123219-25631e451a43a17650c2a06f03bf01b0">&lt;p&gt;크롬 브라우저 종료시 로컬 데이터를 삭제하는 옵션 해제하기&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2020-04-21T18:32:46+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">Run CMD or Powershell as Administrator</title><link href="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579" rel="alternate" type="text/html" title="Run CMD or Powershell as Administrator" /><published>2020-04-21T08:43:54+09:00</published><updated>2020-04-21T08:43:54+09:00</updated><id>https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579</id><content type="html" xml:base="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579">&lt;p&gt;cmd.exe 나 powershell.exe 를 관리자 권한으로 실행하는 방법&lt;br /&gt;
+(Run cmd.exe or powershell.exe as Administrator)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;다음 글은 다양한 방식으로 구현하는 관리자 권한으로 실행하는 방법들 중에서 Microsoft HTML Application Host 프로그램으로 Javascript를 구동하는 방식입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;이미지를 클릭하면 원본 크기로 보실 수 있습니다.&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cmdexe-를-실행하는-스크립트&quot;&gt;cmd.exe 를 실행하는 스크립트&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;@ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+NET SESSION &amp;gt;nul 2&amp;gt;&amp;amp;1
+IF %ERRORLEVEL% NEQ 0 GOTO ELEVATE
+GOTO :EOF
+
+:ELEVATE
+SET this=&quot;%CD%&quot;
+SET this=!this:\=\\!
+
+MSHTA &quot;javascript: var shell = new ActiveXObject('shell.application'); shell.ShellExecute('CMD', '/K CD /D \&quot;!this!\&quot;', '', 'runas', 1);close();&quot;
+EXIT 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;powershellexe-를-실행하는-스크립트&quot;&gt;powershell.exe 를 실행하는 스크립트&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;@ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+NET SESSION &amp;gt;nul 2&amp;gt;&amp;amp;1
+IF %ERRORLEVEL% NEQ 0 GOTO ELEVATE
+GOTO :EOF
+
+:ELEVATE
+SET this=&quot;%CD%&quot;
+SET this=!this:\=\\!
+
+MSHTA &quot;javascript: var shell = new ActiveXObject('shell.application'); shell.ShellExecute('POWERSHELL', '-NoExit -Command Set-Location \&quot;!this!\&quot;', '', 'runas', 1);close();&quot;
+EXIT 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;실행결과&quot;&gt;실행결과&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;관리자로 실행시: 아무런 동작도 하지 않고 종료&lt;/li&gt;
+  &lt;li&gt;관리자가 아니면: 관리자 권한으로 프로그램을 실행&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;동작원리&quot;&gt;동작원리&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;NET SESSION 명령은 관리자인 경우 세션 목록을 보여준다. 하지만 관리자가 아닌 경우 액세스 거부 오류가 발생한다.&lt;/li&gt;
+  &lt;li&gt;ERRORLEVEL 값이 0이면 관리자 권한으로 실행된 것이고 0이 아니면 오류가 발생(즉 관리자 계정이 아닌 경우)한다.&lt;/li&gt;
+  &lt;li&gt;HTML 처리 호스트인 &lt;code&gt;MSHTA&lt;/code&gt; 프로그램으로 자바 스크립트를 구동
+    &lt;ul&gt;
+      &lt;li&gt;ActiveX 컴퍼넌트트 중 쉘 처리 기능을 가진 shell.application 로딩&lt;/li&gt;
+      &lt;li&gt;CMD.EXE 혹은 POWERSHELL.EXE 를 실행하면서 현재 디렉토리를 지정&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;1) 스크립트를 실행하고 권한 승인을 하면
+&lt;a href=&quot;assets/images/4ad5b79d57fa4e0aa14aba18707fdf4e/001.png&quot; caption=&quot;권한 상승&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Privilege Escalation&quot; data-echo=&quot;assets/images/4ad5b79d57fa4e0aa14aba18707fdf4e/001.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2) 관리자 권한으로 실행된 파워쉘이 짠!!!
+&lt;a href=&quot;assets/images/4ad5b79d57fa4e0aa14aba18707fdf4e/002.png&quot; caption=&quot;파워쉘&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Powershell.exe&quot; data-echo=&quot;assets/images/4ad5b79d57fa4e0aa14aba18707fdf4e/002.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;#윈도우&lt;/code&gt;, &lt;code&gt;#명령줄&lt;/code&gt;, &lt;code&gt;#파워쉘&lt;/code&gt;, &lt;code&gt;#파워셸&lt;/code&gt;, &lt;code&gt;MSHTA&lt;/code&gt;, &lt;code&gt;자바스크립트&lt;/code&gt;, &lt;code&gt;액티브엑스&lt;/code&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Command" /><category term="Powershell" /><category term="Windows" /><summary type="html">cmd.exe 나 powershell.exe 를 관리자 권한으로 실행하는 방법 (Run cmd.exe or powershell.exe as Administrator)</summary></entry><entry><title type="html">크롬 브라우저 종료시 다시 로그인을 해야하는 불편함을 해결하는 방법</title><link href="https://kiros33.github.io/20190808123219-25631e451a43a17650c2a06f03bf01b0" rel="alternate" type="text/html" title="크롬 브라우저 종료시 다시 로그인을 해야하는 불편함을 해결하는 방법" /><published>2019-08-08T03:32:19+09:00</published><updated>2019-08-08T03:32:19+09:00</updated><id>https://kiros33.github.io/20190808123219-25631e451a43a17650c2a06f03bf01b0</id><content type="html" xml:base="https://kiros33.github.io/20190808123219-25631e451a43a17650c2a06f03bf01b0">&lt;p&gt;크롬 브라우저 종료시 로컬 데이터를 삭제하는 옵션 해제하기&lt;br /&gt;
 (Keep local data only until you quit your brower)&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -34,7 +99,7 @@
 
 &lt;p&gt;4) 옵션 해제&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;두세번 정도 종료 → 재실행을 통해 로그인이 유지되는지 확인&lt;/li&gt;
+  &lt;li&gt;두세번 정도 종료 → 재실행을 통해 로그인이 유지되는지 확인, 그리고 다음&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&quot;assets/images/25631e451a43a17650c2a06f03bf01b0/004.png&quot; caption=&quot;Turnoff&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Turnoff&quot; data-echo=&quot;assets/images/25631e451a43a17650c2a06f03bf01b0/004.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -418,20 +483,4 @@ session    required       pam_permit.so
 
 &lt;ul&gt;
   &lt;li&gt;늦은시간 귀차니즘으로 스크린샷을 생략하고 작성하였습니다. 질문이 있다면 하단에 댓글로 작성해주시면 답변드리겠습니다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Sangyong Bae</name></author><category term="Mac" /><category term="Terminal" /><category term="sudo" /><summary type="html">이글은 아래 주소를 참고하여 작성하였습니다. How to use sudo with Touch ID on your Mac</summary></entry><entry><title type="html">부천시 특고압의 학교앞 매설 반대 국민청원</title><link href="https://kiros33.github.io/20180606001200-558062fd40c11db3f0103bff12927849" rel="alternate" type="text/html" title="부천시 특고압의 학교앞 매설 반대 국민청원" /><published>2018-06-06T00:12:00+09:00</published><updated>2018-06-06T00:12:00+09:00</updated><id>https://kiros33.github.io/20180606001200-558062fd40c11db3f0103bff12927849</id><content type="html" xml:base="https://kiros33.github.io/20180606001200-558062fd40c11db3f0103bff12927849">&lt;p&gt;부천시 특고압의 학교앞 매설 반대 국민청원에 대한 정보를 공유합니다.&lt;/p&gt;
-
-&lt;p&gt;밀집지 우회 가능하도록 힘을 보태주세요.&lt;/p&gt;
-
-&lt;p&gt;기술적인 안정성과 비용적인 측면을 &lt;em&gt;대한민국의 미래인&lt;/em&gt; 아이들에게 잣대로 들이밀지 않았으면 좋겠습니다.&lt;/p&gt;
-
-&lt;h6 id=&quot;국민청원-바로가기&quot;&gt;국민청원 바로가기&lt;/h6&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www1.president.go.kr/petitions/246465&quot;&gt;국민청원 - 초등학교 앞 지하 8m에 499kV 특고압 매립 막아주세요&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h6 id=&quot;관련기사&quot;&gt;관련기사&lt;/h6&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://m.kyeonggi.com/?mod=news&amp;amp;act=articleView&amp;amp;idxno=1474180&quot;&gt;경기일보 - 한전, 특고압 전선 매설 ‘쉬쉬’… 부평 삼산동 주민 거센 반발&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://news.joins.com/article/22682616&quot;&gt;중앙일보 - 한전·부천시 ‘스쿨존 특고압선 매설’ 갈등&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.bcmaeil.com/bcmaeil/news/?pageUrl=news_view&amp;amp;section=2&amp;amp;news_num=9081&quot;&gt;부천매일 - 상동신도시 8m 특고압…공청회에서 본 ‘문제의 핵심’&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Sangyong Bae</name></author><category term="부천시" /><summary type="html">부천시 특고압의 학교앞 매설 반대 국민청원에 대한 정보를 공유합니다.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Sangyong Bae</name></author><category term="Mac" /><category term="Terminal" /><category term="sudo" /><summary type="html">이글은 아래 주소를 참고하여 작성하였습니다. How to use sudo with Touch ID on your Mac</summary></entry></feed>

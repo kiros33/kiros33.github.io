@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>Run CMD or Powershell as Administrator</title>
+        
+          <description>&lt;p&gt;cmd.exe 나 powershell.exe 를 관리자 권한으로 실행하는 방법&lt;br /&gt;
+(Run cmd.exe or powershell.exe as Administrator)&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 21 Apr 2020 08:43:54 +0900</pubDate>
+        <link>
+        https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579</link>
+        <guid isPermaLink="true">https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>크롬 브라우저 종료시 다시 로그인을 해야하는 불편함을 해결하는 방법</title>
         
           <description>&lt;p&gt;크롬 브라우저 종료시 로컬 데이터를 삭제하는 옵션 해제하기&lt;br /&gt;

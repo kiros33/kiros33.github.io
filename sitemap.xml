@@ -287,6 +287,22 @@
   
   
       <url>
+        <loc>https://kiros33.github.io/tag/command/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
+        <loc>https://kiros33.github.io/tag/powershell/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
         <loc>https://kiros33.github.io/author/kiros33/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -351,6 +367,12 @@
   
   
   
+  
+      <url>
+        <loc>https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
   
       <url>
         <loc>https://kiros33.github.io/20190808123219-25631e451a43a17650c2a06f03bf01b0</loc>
