@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2020-04-21T19:23:13+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">Listening port via Powershell</title><link href="https://kiros33.github.io/20200421095727-d4e967ea248dba1d2ffde4c262b1f576" rel="alternate" type="text/html" title="Listening port via Powershell" /><published>2020-04-21T09:57:27+09:00</published><updated>2020-04-21T09:57:27+09:00</updated><id>https://kiros33.github.io/20200421095727-d4e967ea248dba1d2ffde4c262b1f576</id><content type="html" xml:base="https://kiros33.github.io/20200421095727-d4e967ea248dba1d2ffde4c262b1f576">&lt;p&gt;파워쉘로 포트 열기&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2020-04-21T19:46:34+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">Listening port via Node.js</title><link href="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579" rel="alternate" type="text/html" title="Listening port via Node.js" /><published>2020-04-21T10:30:14+09:00</published><updated>2020-04-21T10:30:14+09:00</updated><id>https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579</id><content type="html" xml:base="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579">&lt;p&gt;노드로 포트 열기&lt;br /&gt;
+(Listening port via Node.js)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;간단하게 Node.js 에서 포트 대기하는 방법&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;이미지를 클릭하면 원본 크기로 보실 수 있습니다.&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;스크립트-예제&quot;&gt;스크립트 예제&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-node&quot;&gt;var net = require('net');
+
+// 서버를 생성
+var server = net.createServer(function(socket){
+  console.log(socket.address().address + &quot; connected.&quot;);
+  
+  // client로 부터 오는 data를 화면에 출력
+  socket.on('data', function(data){
+    console.log('rcv:' + data);
+    //socket.write(&quot;ok received\r\n&quot;);
+    //data에는 이미 newline 문자가 포함되어있음
+    socket.write(&quot;ok received, &quot; + data);
+    console.log('snd:' + 'ok');
+  });
+  // client와 접속이 끊기는 메시지 출력
+  socket.on('close', function(){
+    console.log('client disconnted.');
+  });
+  // client가 접속하면 화면에 출력해주는 메시지
+  socket.write('welcome to server\r\n');
+});
+
+// 에러가 발생할 경우 화면에 에러메시지 출력
+server.on('error', function(err){
+  console.log('err'+ err  );
+});
+
+// Port 5000으로 접속이 가능하도록 대기
+server.listen(5000, function(){
+  console.log('linsteing on 5000..');
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;실행&quot;&gt;실행&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;스크립트를 실행하면 5000 포트로 대기
+&lt;a href=&quot;assets/images/8c04743de29cba32929e7a997b67c67e/001.png&quot; caption=&quot;Listening&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Listening&quot; data-echo=&quot;assets/images/8c04743de29cba32929e7a997b67c67e/001.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;접속&quot;&gt;접속&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;netcat
+&lt;a href=&quot;assets/images/8c04743de29cba32929e7a997b67c67e/002.png&quot; caption=&quot;Netcat Test&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Netcat Test&quot; data-echo=&quot;assets/images/8c04743de29cba32929e7a997b67c67e/002.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;전송&quot;&gt;전송&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;assets/images/8c04743de29cba32929e7a997b67c67e/003.png&quot; caption=&quot;Say Hi&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Say Hi&quot; data-echo=&quot;assets/images/8c04743de29cba32929e7a997b67c67e/003.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;#포트&lt;/code&gt;, &lt;code&gt;#네트워크&lt;/code&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Node" /><category term="Network" /><summary type="html">노드로 포트 열기 (Listening port via Node.js)</summary></entry><entry><title type="html">Listening port via Powershell</title><link href="https://kiros33.github.io/20200421095727-d4e967ea248dba1d2ffde4c262b1f576" rel="alternate" type="text/html" title="Listening port via Powershell" /><published>2020-04-21T09:57:27+09:00</published><updated>2020-04-21T09:57:27+09:00</updated><id>https://kiros33.github.io/20200421095727-d4e967ea248dba1d2ffde4c262b1f576</id><content type="html" xml:base="https://kiros33.github.io/20200421095727-d4e967ea248dba1d2ffde4c262b1f576">&lt;p&gt;파워쉘로 포트 열기&lt;br /&gt;
 (Listening port via Powershell)&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -59,7 +119,7 @@ finally{
 &lt;h3 id=&quot;종료&quot;&gt;종료&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/005.png&quot; caption=&quot;종료&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;Terminate&quot; data-echo=&quot;assets/images/d4e967ea248dba1d2ffde4c262b1f576/005.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;#파워쉘&lt;/code&gt;, &lt;code&gt;#파워셸&lt;/code&gt;, &lt;code&gt;#포트&lt;/code&gt;, &lt;code&gt;#네트워크&lt;/code&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Command" /><category term="Powershell" /><category term="Windows" /><category term="Network" /><summary type="html">파워쉘로 포트 열기 (Listening port via Powershell)</summary></entry><entry><title type="html">Run CMD or Powershell as Administrator</title><link href="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579" rel="alternate" type="text/html" title="Run CMD or Powershell as Administrator" /><published>2020-04-21T08:43:54+09:00</published><updated>2020-04-21T08:43:54+09:00</updated><id>https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579</id><content type="html" xml:base="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579">&lt;p&gt;cmd.exe 나 powershell.exe 를 관리자 권한으로 실행하는 방법&lt;br /&gt;
+&lt;p&gt;&lt;code&gt;#파워쉘&lt;/code&gt;, &lt;code&gt;#파워셸&lt;/code&gt;, &lt;code&gt;#포트&lt;/code&gt;, &lt;code&gt;#네트워크&lt;/code&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Command" /><category term="Powershell" /><category term="Windows" /><category term="Network" /><summary type="html">파워쉘로 포트 열기 (Listening port via Powershell)</summary></entry><entry><title type="html">Run CMD or Powershell as Administrator</title><link href="https://kiros33.github.io/20200421103014-8c04743de29cba32929e7a997b67c67e" rel="alternate" type="text/html" title="Run CMD or Powershell as Administrator" /><published>2020-04-21T08:43:54+09:00</published><updated>2020-04-21T08:43:54+09:00</updated><id>https://kiros33.github.io/20200421103014-8c04743de29cba32929e7a997b67c67e</id><content type="html" xml:base="https://kiros33.github.io/20200421103014-8c04743de29cba32929e7a997b67c67e">&lt;p&gt;cmd.exe 나 powershell.exe 를 관리자 권한으로 실행하는 방법&lt;br /&gt;
 (Run cmd.exe or powershell.exe as Administrator)&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -464,33 +524,4 @@ EXIT 1
 
 &lt;p&gt;프리미엄 계정을 사용하지 않는다면 토렌트(torrent)가 답입니다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;아!!! JDownloader를 사용하면 유튜브 재생목록을 한 방에 다운로드 할 수 있는건 아시지요???&lt;/strong&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Mac" /><category term="JDownloader" /><category term="Chrome" /><summary type="html">맥에서 Jdownloader를 사용하면서 캡차 플러그인이 적용된 크롬을 사용하는 방법입니다.</summary></entry><entry><title type="html">파워셀에서 임시 파일들을 제거하는 방법</title><link href="https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7" rel="alternate" type="text/html" title="파워셀에서 임시 파일들을 제거하는 방법" /><published>2018-06-25T01:49:59+09:00</published><updated>2018-06-25T01:49:59+09:00</updated><id>https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7</id><content type="html" xml:base="https://kiros33.github.io/20181015105615-96af7d11bf74dcd91646f445d08ea6f7">&lt;p&gt;가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-powershell&quot;&gt;&amp;lt;#
-	Cleaning Temporary Files
-#&amp;gt;
-
-function GoDir($TargetDir)
-{
-	echo &quot;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; Moving to $TargetDir&quot;
-	Set-Location $TargetDir
-}
-
-$CurDir = (Get-Item -Path &quot;.\&quot;).FullName
-
-GoDir(&quot;C:\Windows\Temp&quot;)
-Remove-Item * -recurse -force
-
-GoDir(&quot;C:\Windows\Prefetch&quot;)
-Remove-Item * -recurse -force
-
-GoDir(&quot;C:\Windows\SoftwareDistribution&quot;)
-Remove-Item &quot;.\Download\*&quot; -recurse -force
-
-
-GoDir(&quot;C:\Users&quot;)
-Remove-Item &quot;.\*\Appdata\Local\Temp\*&quot; -recurse -force
-
-echo &quot;Return to $CurDir&quot;
-Set-Location $CurDir
-&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Windows" /><category term="PowerShell" /><category term="Temporary Files" /><summary type="html">가상머신을 관리하면서 일일이 파일을 찾아 지우는게 귀찮아서 스크립트를 만들었습니다.</summary></entry></feed>
+&lt;p&gt;&lt;strong&gt;아!!! JDownloader를 사용하면 유튜브 재생목록을 한 방에 다운로드 할 수 있는건 아시지요???&lt;/strong&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Mac" /><category term="JDownloader" /><category term="Chrome" /><summary type="html">맥에서 Jdownloader를 사용하면서 캡차 플러그인이 적용된 크롬을 사용하는 방법입니다.</summary></entry></feed>
