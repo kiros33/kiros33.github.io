@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>Setting the NLS_LANG Environment Variable for Oracle Databases</title>
+        
+          <description>&lt;p&gt;오라클 데이터베이스의 NLS_LANG 환경 변수 설정&lt;br /&gt;
+(Setting the NLS_LANG Environment Variable for Oracle Databases)&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 22 Apr 2020 09:39:56 +0900</pubDate>
+        <link>
+        https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29</link>
+        <guid isPermaLink="true">https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Listening port via Node.js</title>
         
           <description>&lt;p&gt;노드로 포트 열기&lt;br /&gt;

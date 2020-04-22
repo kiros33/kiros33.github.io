@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2020-04-21T19:46:34+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">Listening port via Node.js</title><link href="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579" rel="alternate" type="text/html" title="Listening port via Node.js" /><published>2020-04-21T10:30:14+09:00</published><updated>2020-04-21T10:30:14+09:00</updated><id>https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579</id><content type="html" xml:base="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579">&lt;p&gt;노드로 포트 열기&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2020-04-22T19:08:43+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">Setting the NLS_LANG Environment Variable for Oracle Databases</title><link href="https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29" rel="alternate" type="text/html" title="Setting the NLS_LANG Environment Variable for Oracle Databases" /><published>2020-04-22T09:39:56+09:00</published><updated>2020-04-22T09:39:56+09:00</updated><id>https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29</id><content type="html" xml:base="https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29">&lt;p&gt;오라클 데이터베이스의 NLS_LANG 환경 변수 설정&lt;br /&gt;
+(Setting the NLS_LANG Environment Variable for Oracle Databases)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Console 이나 Client 프로그램 혹은 Apache Tomcat 등에서 Oracle Database에 접속할 때 언어 설정으로 오류가 발생할 경우 도움이 됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;이미지를 클릭하면 원본 크기로 보실 수 있습니다.&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;관련-오류&quot;&gt;관련 오류&lt;/h3&gt;
+&lt;p&gt;1) ORA-01861: literal does not match format string&lt;/p&gt;
+
+&lt;h3 id=&quot;관련-증상&quot;&gt;관련 증상&lt;/h3&gt;
+&lt;p&gt;1) TO_CHAR() 함수 사용시 ‘YYYMMDD’ 와 같은 순서로 변환하면 오류 발생&lt;/p&gt;
+
+&lt;h3 id=&quot;registry-수정-방법&quot;&gt;Registry 수정 방법&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;오라클이 설치된 경우 레지스트리를 변경해서 해결 가능&lt;/li&gt;
+  &lt;li&gt;키
+    &lt;pre&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Oracle\KEY_OraDB12Home1\NLS_LANG
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;값 (일부 예제)
+    &lt;ul&gt;
+      &lt;li&gt;영어: &lt;code&gt;AMERICAN_AMERICA.WE8MSWIN1252&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;한글: &lt;code&gt;KOREAN_KOREA.KO16MSWIN949&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;환경-변수&quot;&gt;환경 변수&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;LANG&lt;/code&gt;=&lt;code&gt;KO&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;NLS_LANG&lt;/code&gt;=&lt;code&gt;KOREAN_KOREA.KO16MSWIN949&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;아파치-톰캣---직접-실행&quot;&gt;아파치 톰캣 - 직접 실행&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;환경 변수가 설정된 경우 반영됨&lt;/li&gt;
+  &lt;li&gt;환경 변수가 설정되지 않았다면 catalina.bat/catalina.sh 상단에 환경 변수를 직접 넣어도 정상 동작함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;아파치-톰캣---서비스&quot;&gt;아파치 톰캣 - 서비스&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;서비스 설정: 윈도우를 예로 설명
+    &lt;ul&gt;
+      &lt;li&gt;C:\tomcat\bin\tomcat8w.exe //ES//MYWAS&lt;/li&gt;
+      &lt;li&gt;Java Options 에 아래 항목 추가
+        &lt;pre&gt;&lt;code&gt;  -Duser.language=ko
+  -Duser.region=KR
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;#오라클&lt;/code&gt;, &lt;code&gt;#데이터베이스&lt;/code&gt;, &lt;code&gt;#NLS_LANG&lt;/code&gt; &lt;code&gt;#ORA-01861&lt;/code&gt;, &lt;code&gt;#환경변수&lt;/code&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Oracle" /><category term="Database" /><summary type="html">오라클 데이터베이스의 NLS_LANG 환경 변수 설정 (Setting the NLS_LANG Environment Variable for Oracle Databases)</summary></entry><entry><title type="html">Listening port via Node.js</title><link href="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579" rel="alternate" type="text/html" title="Listening port via Node.js" /><published>2020-04-21T10:30:14+09:00</published><updated>2020-04-21T10:30:14+09:00</updated><id>https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579</id><content type="html" xml:base="https://kiros33.github.io/20200421174203-bec2b6d550598bc9ac42a4dba1965579">&lt;p&gt;노드로 포트 열기&lt;br /&gt;
 (Listening port via Node.js)&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -498,30 +556,4 @@ EXIT 1
 &lt;p&gt;최종 수정 날짜: 2018/11/16&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;내용
-&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Policies" /><summary type="html">개인정보처리방침</summary></entry><entry><title type="html">JDownloader의 Captcha Solver에서 Chrome 브라우저로 링크 열기</title><link href="https://kiros33.github.io/20181114144858-5039d5e8ba6c325b6eb20edd075c4b34" rel="alternate" type="text/html" title="JDownloader의 Captcha Solver에서 Chrome 브라우저로 링크 열기" /><published>2018-11-14T14:49:41+09:00</published><updated>2018-11-14T14:49:41+09:00</updated><id>https://kiros33.github.io/20181114144858-5039d5e8ba6c325b6eb20edd075c4b34</id><content type="html" xml:base="https://kiros33.github.io/20181114144858-5039d5e8ba6c325b6eb20edd075c4b34">&lt;p&gt;맥에서 Jdownloader를 사용하면서 캡차 플러그인이 적용된 크롬을 사용하는 방법입니다.&lt;/p&gt;
-
-&lt;p&gt;다양한 다운로드 사이트에서 파일을 받아야 할 때 Torrent를 제외하면 모두 JDownloader를 통해서 일괄 관리하고 있습니다.&lt;/p&gt;
-
-&lt;p&gt;가지고 있진 않지만 &lt;u&gt;프리미엄 계정&lt;/u&gt;이 있는 경우도 관리해주고 &lt;u&gt;이어받기&lt;/u&gt;, &lt;u&gt;목록 및 URL 관리&lt;/u&gt;의 편의성 때문입니다.&lt;/p&gt;
-
-&lt;p&gt;저는 주로 맥을 사용하고 있고 여러가지 연계 기능에 있어서 Safari가 크게 불편하지 않아서 기본 브라우저로 &lt;strong&gt;사파리&lt;/strong&gt;를 사용하고 있습니다. 일부 플러그인을 사용한 작업 혹은 사이트가 크롬에 최적화 된 경우도 있어서 &lt;strong&gt;크롬&lt;/strong&gt;도 함께 사용합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;일부 다운로드 사이트는 다운로드 전에 CAPTCHA 인증을 요구하고 있습니다.&lt;/em&gt;
-특히나 JDownloader의 캡차 연동기능으로 사이트를 직접 방문하지 않고 캡차 풀이가 가능한데 아쉽게도 사파리에는 플러그인이 없어서 크롬으로 열어야 합니다.&lt;/p&gt;
-
-&lt;p&gt;이 경우 기본브라우저를 바꾸지 않고 크롬이 열리도록 하려면 다음의 순서대로 설정을 변경해주어야 합니다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;JDownloader의 &lt;code&gt;Preferences&lt;/code&gt; 선택&lt;/li&gt;
-  &lt;li&gt;Tray Icon 밑의 &lt;code&gt;Advanced Settings&lt;/code&gt; 선택&lt;/li&gt;
-  &lt;li&gt;상단에 &lt;code&gt;BrowserCaptchaSolver.browsercommandline&lt;/code&gt; 값으로 검색&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;Value&lt;/code&gt; 에 &lt;code&gt;[&quot;open&quot;,&quot;/Applications/Google Chrome.app&quot;,&quot;--args&quot;,&quot;%s&quot;]&lt;/code&gt; 값을 지정&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/images/5039d5e8ba6c325b6eb20edd075c4b34/001.png&quot; alt=&quot;Preferences&quot; height=&quot;600px&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;다음부터는 캡차가 필요한 경우 크롬으로 자동으로 열리고 자동화 가능한 부분까지 처리됩니다. 근래는 전체 자동화는 안되고 &lt;em&gt;버스&lt;/em&gt;, &lt;em&gt;자전거&lt;/em&gt;, &lt;em&gt;소화전&lt;/em&gt; 등을 여러번 요구해서 아주 많이 짜증납니다. 😤😤😤&lt;/p&gt;
-
-&lt;p&gt;프리미엄 계정을 사용하지 않는다면 토렌트(torrent)가 답입니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;아!!! JDownloader를 사용하면 유튜브 재생목록을 한 방에 다운로드 할 수 있는건 아시지요???&lt;/strong&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Mac" /><category term="JDownloader" /><category term="Chrome" /><summary type="html">맥에서 Jdownloader를 사용하면서 캡차 플러그인이 적용된 크롬을 사용하는 방법입니다.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Policies" /><summary type="html">개인정보처리방침</summary></entry></feed>
