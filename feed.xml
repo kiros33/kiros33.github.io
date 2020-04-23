@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2020-04-22T19:08:43+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">Setting the NLS_LANG Environment Variable for Oracle Databases</title><link href="https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29" rel="alternate" type="text/html" title="Setting the NLS_LANG Environment Variable for Oracle Databases" /><published>2020-04-22T09:39:56+09:00</published><updated>2020-04-22T09:39:56+09:00</updated><id>https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29</id><content type="html" xml:base="https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29">&lt;p&gt;오라클 데이터베이스의 NLS_LANG 환경 변수 설정&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2020-04-23T19:40:37+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">가톨릭대학교 인천성모병원 권역호스피스센터 유튜브 채널</title><link href="https://kiros33.github.io/20200423082415-f66b02dc2f58cc46226ea57e313fe2ca" rel="alternate" type="text/html" title="가톨릭대학교 인천성모병원 권역호스피스센터 유튜브 채널" /><published>2020-04-23T08:24:15+09:00</published><updated>2020-04-23T08:24:15+09:00</updated><id>https://kiros33.github.io/20200423082415-f66b02dc2f58cc46226ea57e313fe2ca</id><content type="html" xml:base="https://kiros33.github.io/20200423082415-f66b02dc2f58cc46226ea57e313fe2ca">&lt;p&gt;가톨릭대학교 인천성모병원 권역호스피스센터 유튜브 채널이 새로 생겼습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;죽음이 아닌 삶에 대한 이야기, 호스피스&lt;/p&gt;
+
+  &lt;p&gt;삶을 더 가치 있게 만드는 마지막.&lt;br /&gt;
+호스피스가 함께합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;이미지를 클릭하면 원본 크기로 보실 수 있습니다.&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;assets/images/f66b02dc2f58cc46226ea57e313fe2ca/001.jpg&quot; caption=&quot;notice&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;안내문&quot; data-echo=&quot;assets/images/f66b02dc2f58cc46226ea57e313fe2ca/001.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;1) 호스피스에서 일하는 사람들 #1 간호사 김현경&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/iXbfZIAmvyQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;code&gt;#가톨릭대학교&lt;/code&gt;, &lt;code&gt;#인천성모병원&lt;/code&gt;, &lt;code&gt;#권역호스피스센터&lt;/code&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Oracle" /><category term="Database" /><summary type="html">가톨릭대학교 인천성모병원 권역호스피스센터 유튜브 채널이 새로 생겼습니다.</summary></entry><entry><title type="html">Setting the NLS_LANG Environment Variable for Oracle Databases</title><link href="https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29" rel="alternate" type="text/html" title="Setting the NLS_LANG Environment Variable for Oracle Databases" /><published>2020-04-22T09:39:56+09:00</published><updated>2020-04-22T09:39:56+09:00</updated><id>https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29</id><content type="html" xml:base="https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29">&lt;p&gt;오라클 데이터베이스의 NLS_LANG 환경 변수 설정&lt;br /&gt;
 (Setting the NLS_LANG Environment Variable for Oracle Databases)&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -551,9 +569,4 @@ EXIT 1
 &lt;p&gt;최종 수정 날짜: 2018/11/16&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;내용
-&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Policies" /><summary type="html">서비스 약관</summary></entry><entry><title type="html">개인정보처리방침</title><link href="https://kiros33.github.io/privacy-policy" rel="alternate" type="text/html" title="개인정보처리방침" /><published>2018-11-16T12:04:17+09:00</published><updated>2018-11-16T12:04:17+09:00</updated><id>https://kiros33.github.io/privacy-policy</id><content type="html" xml:base="https://kiros33.github.io/privacy-policy">&lt;h1 id=&quot;개인정보처리방침&quot;&gt;개인정보처리방침&lt;/h1&gt;
-
-&lt;p&gt;최종 수정 날짜: 2018/11/16&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;내용
-&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Policies" /><summary type="html">개인정보처리방침</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Policies" /><summary type="html">서비스 약관</summary></entry></feed>

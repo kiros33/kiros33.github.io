@@ -5,7 +5,7 @@
 * 단축: ;dtkr;
 * 포맷: 2019/02/14 18:55:13 +09:00
 ```
-2020-04-21 09:57:27 +09:00
+2020-04-23 08:24:15 +09:00
 ```
 
 ### 글 해시값 (지정시간)
@@ -28,9 +28,9 @@
 * 파일 경로: _posts/2019-02-14-20190214185525-5db75118bede859338ec6b48d5519bbc.md
 * 이미지 경로: assets/images/5db75118bede859338ec6b48d5519bbc
 ```
-2020-04-21-20200421095727-d4e967ea248dba1d2ffde4c262b1f576
-_posts/2020-04-21-20200421095727-d4e967ea248dba1d2ffde4c262b1f576.md
-assets/images/d4e967ea248dba1d2ffde4c262b1f576
+2020-04-23-20200423082415-f66b02dc2f58cc46226ea57e313fe2ca
+_posts/2020-04-23-20200423082415-f66b02dc2f58cc46226ea57e313fe2ca.md
+assets/images/f66b02dc2f58cc46226ea57e313fe2ca
 ```
 
 ### 이미지 설정
@@ -42,12 +42,12 @@ assets/images/d4e967ea248dba1d2ffde4c262b1f576
     - 원본 이미지: 클릭시 보여줄 원본 이미지, `assets/images/5db75118bede859338ec6b48d5519bbc/001.png`
     - 캡션 텍스트: 이미지 설명으로 보여줄 텍스트 `차량관련정보`
 ```
-[![Privilege Escalation](assets/images/blank.png){:data-echo="assets/images/d4e967ea248dba1d2ffde4c262b1f576/001.840.jpg"}](assets/images/d4e967ea248dba1d2ffde4c262b1f576/001.png){:caption="권한 상승"}
-[![Powershell.exe](assets/images/blank.png){:data-echo="assets/images/d4e967ea248dba1d2ffde4c262b1f576/001.840.jpg"}](assets/images/d4e967ea248dba1d2ffde4c262b1f576/001.png){:caption="파워쉘"}
+[![Privilege Escalation](assets/images/blank.png){:data-echo="assets/images/f66b02dc2f58cc46226ea57e313fe2ca/001.840.jpg"}](assets/images/f66b02dc2f58cc46226ea57e313fe2ca/001.png){:caption="권한 상승"}
+[![Powershell.exe](assets/images/blank.png){:data-echo="assets/images/f66b02dc2f58cc46226ea57e313fe2ca/001.840.jpg"}](assets/images/f66b02dc2f58cc46226ea57e313fe2ca/001.png){:caption="파워쉘"}
 ``` 
 * 이미지 변환 스크립트, 숫자로 구성된 png 파일을 가로 840px 크기의 jpg 포맷으로 변환
 ```
-cd "assets/images/d4e967ea248dba1d2ffde4c262b1f576"
+cd "assets/images/f66b02dc2f58cc46226ea57e313fe2ca"
 for f in $(find -E . -depth 1 -regex ".*[0-9]+\.(png)"); do convert "${f}" -resize 840x\> -set filename:newwidth '%W' "${f%.*}.%[filename:newwidth].jpg" ; done
 ```
 

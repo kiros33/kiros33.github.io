@@ -393,6 +393,12 @@
   
   
       <url>
+        <loc>https://kiros33.github.io/20200423082415-f66b02dc2f58cc46226ea57e313fe2ca</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+      <url>
         <loc>https://kiros33.github.io/20200422093956-6408d97e49a3f096d69f678b6aa1ea29</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
