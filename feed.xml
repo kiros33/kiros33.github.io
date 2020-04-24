@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2020-04-24T01:29:24+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">가톨릭대학교 인천성모병원 권역호스피스센터 유튜브 채널</title><link href="https://kiros33.github.io/20200423082415-f66b02dc2f58cc46226ea57e313fe2ca" rel="alternate" type="text/html" title="가톨릭대학교 인천성모병원 권역호스피스센터 유튜브 채널" /><published>2020-04-23T08:24:15+09:00</published><updated>2020-04-23T08:24:15+09:00</updated><id>https://kiros33.github.io/20200423082415-f66b02dc2f58cc46226ea57e313fe2ca</id><content type="html" xml:base="https://kiros33.github.io/20200423082415-f66b02dc2f58cc46226ea57e313fe2ca">&lt;p&gt;가톨릭대학교 인천성모병원 권역호스피스센터 유튜브 채널이 새로 생겼습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://kiros33.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kiros33.github.io/" rel="alternate" type="text/html" /><updated>2020-04-24T18:14:48+09:00</updated><id>https://kiros33.github.io/</id><title type="html">배저씨네</title><subtitle>넓고 얕은 지식을 지향하는 무식한 개발자</subtitle><entry><title type="html">마이크로소프트 라이선스에 대해서 알아보자.</title><link href="https://kiros33.github.io/20200424075503-e4dcadf5c694e7f8b1487f5611ac84f3" rel="alternate" type="text/html" title="마이크로소프트 라이선스에 대해서 알아보자." /><published>2020-04-24T07:55:03+09:00</published><updated>2020-04-24T07:55:03+09:00</updated><id>https://kiros33.github.io/20200424075503-e4dcadf5c694e7f8b1487f5611ac84f3</id><content type="html" xml:base="https://kiros33.github.io/20200424075503-e4dcadf5c694e7f8b1487f5611ac84f3">&lt;p&gt;마이크로소프트 라이선스에 대해서…&lt;br /&gt;
+(About Microsoft License)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;마이크로소프트 라이선스 이해에&lt;br /&gt;
+도움이 되는 글을&lt;br /&gt;
+발췌하거나 모아 놓았습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;이미지를 클릭하면 원본 크기로 보실 수 있습니다.&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;windows-server-2019-구입-시-라이선스를-몇-개-사야-하나요&quot;&gt;&lt;a href=&quot;https://www.soft2000.com/14671&quot;&gt;Windows Server 2019 구입 시, 라이선스를 몇 개 사야 하나요?&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;간단한 소개&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;보통 소프트웨어를 구입할 때, PC 1대 당 또는 사용자 1명 당 한 개의 라이선스를 구입합니다. 예를 들어 Windows 10은 PC 1대 당 하나, Office 365는 사용자 1명 당 하나를 구입하면 됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;하지만 Windows Server는 다릅니다. Windows Server는 서버에 장착된 CPU의 Core 개수만큼 라이선스를 구입합니다. 그런데, Core의 개수를 세는 방식이 좀 복잡하여, 자칫 잘못하면 라이선스를 더 사거나 덜 살 수 있습니다. 더 사면 불필요한 비용을 지출한 것이 되고, 덜 사면 라이선스 위반으로 불이익을 받을 수 있으므로, 몇 개를 사야하는지 정확히 계산하는 게 중요합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;자세한 내용은 원본글로 가시거나 유튜브 동영상을 참고하세요!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;1180&quot; height=&quot;664&quot; src=&quot;https://www.youtube.com/embed/NU-F7vgyxd0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&quot;assets/images/e4dcadf5c694e7f8b1487f5611ac84f3/001.jpg&quot; caption=&quot;CAL and ML&quot;&gt;&lt;img src=&quot;assets/images/blank.png&quot; alt=&quot;CAL and ML&quot; data-echo=&quot;assets/images/e4dcadf5c694e7f8b1487f5611ac84f3/001.840.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;#마이크로소프트&lt;/code&gt;, &lt;code&gt;#라이선스&lt;/code&gt;, &lt;code&gt;#윈도우&lt;/code&gt;, &lt;code&gt;#서버&lt;/code&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Microsoft" /><category term="License" /><summary type="html">마이크로소프트 라이선스에 대해서… (About Microsoft License)</summary></entry><entry><title type="html">가톨릭대학교 인천성모병원 권역호스피스센터 유튜브 채널</title><link href="https://kiros33.github.io/20200423082415-f66b02dc2f58cc46226ea57e313fe2ca" rel="alternate" type="text/html" title="가톨릭대학교 인천성모병원 권역호스피스센터 유튜브 채널" /><published>2020-04-23T08:24:15+09:00</published><updated>2020-04-23T08:24:15+09:00</updated><id>https://kiros33.github.io/20200423082415-f66b02dc2f58cc46226ea57e313fe2ca</id><content type="html" xml:base="https://kiros33.github.io/20200423082415-f66b02dc2f58cc46226ea57e313fe2ca">&lt;p&gt;가톨릭대학교 인천성모병원 권역호스피스센터 유튜브 채널이 새로 생겼습니다.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -564,9 +599,4 @@ EXIT 1
   &lt;li&gt;결과는 최대 50줄만 보이며 전체 결과는 CSV 형태의 텍스트 문서로 다운로드 할 수 있습니다. &lt;code&gt;Actions&lt;/code&gt; 에서 최대 5000 까지 설정할 수도 있습니다.결&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;#Oracle&lt;/code&gt;, &lt;code&gt;#오라클&lt;/code&gt;, &lt;code&gt;Live SQL##&lt;/code&gt;, &lt;code&gt;#라이브 SQL&lt;/code&gt;, &lt;code&gt;#Database&lt;/code&gt;, &lt;code&gt;#DBMS&lt;/code&gt;, &lt;code&gt;#데이터베이스&lt;/code&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Oracle" /><category term="DBMS" /><category term="SQL" /><summary type="html">Oracle Live SQL을 소개합니다.</summary></entry><entry><title type="html">서비스 약관</title><link href="https://kiros33.github.io/terms-policy" rel="alternate" type="text/html" title="서비스 약관" /><published>2018-11-16T12:04:17+09:00</published><updated>2018-11-16T12:04:17+09:00</updated><id>https://kiros33.github.io/terms-policy</id><content type="html" xml:base="https://kiros33.github.io/terms-policy">&lt;h1 id=&quot;서비스-약관&quot;&gt;서비스 약관&lt;/h1&gt;
-
-&lt;p&gt;최종 수정 날짜: 2018/11/16&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;내용
-&lt;/code&gt;&lt;/pre&gt;</content><author><name>Sangyong Bae</name></author><category term="Policies" /><summary type="html">서비스 약관</summary></entry></feed>
+&lt;p&gt;&lt;code&gt;#Oracle&lt;/code&gt;, &lt;code&gt;#오라클&lt;/code&gt;, &lt;code&gt;Live SQL##&lt;/code&gt;, &lt;code&gt;#라이브 SQL&lt;/code&gt;, &lt;code&gt;#Database&lt;/code&gt;, &lt;code&gt;#DBMS&lt;/code&gt;, &lt;code&gt;#데이터베이스&lt;/code&gt;&lt;/p&gt;</content><author><name>Sangyong Bae</name></author><category term="Oracle" /><category term="DBMS" /><category term="SQL" /><summary type="html">Oracle Live SQL을 소개합니다.</summary></entry></feed>
