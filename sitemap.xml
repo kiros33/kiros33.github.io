@@ -375,6 +375,30 @@
   
   
       <url>
+        <loc>https://kiros33.github.io/tag/%EB%B0%80%EB%A6%AC%EC%9D%98%EC%84%9C%EC%9E%AC/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
+        <loc>https://kiros33.github.io/tag/%EC%A0%84%EC%9E%90%EB%8F%84%EC%84%9C%EA%B4%80/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
+        <loc>https://kiros33.github.io/tag/%EC%B6%A9%EB%82%A8%EA%B5%90%EC%9C%A1%EC%B2%AD/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
         <loc>https://kiros33.github.io/author/kiros33/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -439,6 +463,12 @@
   
   
   
+  
+      <url>
+        <loc>https://kiros33.github.io/20201008110511-9c66fddea77e9c6b27b2a03ee0a508b2</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
   
       <url>
         <loc>https://kiros33.github.io/20200423082415-f66b02dc2f58cc46226ea57e313fe2ca</loc>
