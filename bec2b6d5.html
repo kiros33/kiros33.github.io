@@ -11,7 +11,7 @@
 
 
 
-    <title>오라클 라이브 SQL 소개</title>
+    <title>Listening port via Node.js</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -27,30 +27,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="넓고 얕은 지식을 지향하는 무식한 개발자" />
     <link rel="shortcut icon" href="https://kiros33.github.io/assets/images/favicon-kiros33.png" type="image/png" />
-    <link rel="canonical" href="https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74" />
+    <link rel="canonical" href="https://kiros33.github.io/bec2b6d5" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="배저씨네" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="오라클 라이브 SQL 소개" />
-    <meta property="og:description" content="Oracle Live SQL을 소개합니다. 오라클을 설치하고 Sample schema를 추가하는 것은 개발자라면 기본으로 할 수 있어야 할 것입니다! 그렇다고 테스트나 학습을 위해 필요할 때마다 서버를 만드는 것은 참으로 고욕입니다. 공통으로 사용할 수 있는 테스트 서버의 경우는 마음대로 데이터베이스나 테이블을 다루기 힘들고 개인 서버를 운용하자니 번거롭기도 하고 리소스가 부족하기도 합니다. 이럴때 간단한" />
-    <meta property="og:url" content="https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74" />
-    <meta property="og:image" content="https://kiros33.github.io/assets/images/blog-cover.jpg" />
+    <meta property="og:title" content="Listening port via Node.js" />
+    <meta property="og:description" content="노드로 포트 열기 (Listening port via Node.js) 간단하게 Node.js 에서 포트 대기하는 방법 이미지를 클릭하면 원본 크기로 보실 수 있습니다. 스크립트 예제 var net = require('net'); // 서버를 생성 var server = net.createServer(function(socket){ console.log(socket.address().address + " connected."); // client로 부터 오는 data를 화면에 출력 socket.on('data', function(data){ console.log('rcv:' + data); //socket.write("ok" />
+    <meta property="og:url" content="https://kiros33.github.io/bec2b6d5" />
+    <meta property="og:image" content="https://kiros33.github.io/assets/images/cover/nodejs.png" />
     <meta property="article:publisher" content="https://www.facebook.com/kiros33" />
     <meta property="article:author" content="https://www.facebook.com/kiros33" />
-    <meta property="article:published_time" content="2019-01-10T13:57:05+09:00" />
-    <meta property="article:modified_time" content="2019-01-10T13:57:05+09:00" />
-    <meta property="article:tag" content="Oracle" />
+    <meta property="article:published_time" content="2020-04-21T10:30:14+09:00" />
+    <meta property="article:modified_time" content="2020-04-21T10:30:14+09:00" />
+    <meta property="article:tag" content="Node" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="오라클 라이브 SQL 소개" />
-    <meta name="twitter:description" content="Oracle Live SQL을 소개합니다. 오라클을 설치하고 Sample schema를 추가하는 것은 개발자라면 기본으로 할 수 있어야 할 것입니다! 그렇다고 테스트나 학습을 위해 필요할 때마다 서버를 만드는 것은 참으로 고욕입니다. 공통으로 사용할 수 있는 테스트 서버의 경우는 마음대로 데이터베이스나 테이블을 다루기 힘들고 개인 서버를 운용하자니 번거롭기도 하고 리소스가 부족하기도 합니다. 이럴때 간단한" />
+    <meta name="twitter:title" content="Listening port via Node.js" />
+    <meta name="twitter:description" content="노드로 포트 열기 (Listening port via Node.js) 간단하게 Node.js 에서 포트 대기하는 방법 이미지를 클릭하면 원본 크기로 보실 수 있습니다. 스크립트 예제 var net = require('net'); // 서버를 생성 var server = net.createServer(function(socket){ console.log(socket.address().address + " connected."); // client로 부터 오는 data를 화면에 출력 socket.on('data', function(data){ console.log('rcv:' + data); //socket.write("ok" />
     <meta name="twitter:url" content="https://kiros33.github.io/" />
-    <meta name="twitter:image" content="https://kiros33.github.io/assets/images/blog-cover.jpg" />
+    <meta name="twitter:image" content="https://kiros33.github.io/assets/images/cover/nodejs.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="배저씨네" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Oracle" />
+    <meta name="twitter:data2" content="Node" />
     <meta name="twitter:site" content="@kiros33" />
     <meta name="twitter:creator" content="@kiros33" />
     <meta property="og:image:width" content="1400" />
@@ -65,18 +65,18 @@
         "name": "배저씨네",
         "logo": "https://kiros33.github.io/assets/images/blog-icon-kiros33.png"
     },
-    "url": "https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74",
+    "url": "https://kiros33.github.io/bec2b6d5",
     "image": {
         "@type": "ImageObject",
-        "url": "https://kiros33.github.io/assets/images/blog-cover.jpg",
+        "url": "https://kiros33.github.io/assets/images/cover/nodejs.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74"
+        "@id": "https://kiros33.github.io/bec2b6d5"
     },
-    "description": "Oracle Live SQL을 소개합니다. 오라클을 설치하고 Sample schema를 추가하는 것은 개발자라면 기본으로 할 수 있어야 할 것입니다! 그렇다고 테스트나 학습을 위해 필요할 때마다 서버를 만드는 것은 참으로 고욕입니다. 공통으로 사용할 수 있는 테스트 서버의 경우는 마음대로 데이터베이스나 테이블을 다루기 힘들고 개인 서버를 운용하자니 번거롭기도 하고 리소스가 부족하기도 합니다. 이럴때 간단한"
+    "description": "노드로 포트 열기 (Listening port via Node.js) 간단하게 Node.js 에서 포트 대기하는 방법 이미지를 클릭하면 원본 크기로 보실 수 있습니다. 스크립트 예제 var net = require('net'); // 서버를 생성 var server = net.createServer(function(socket){ console.log(socket.address().address + " connected."); // client로 부터 오는 data를 화면에 출력 socket.on('data', function(data){ console.log('rcv:' + data); //socket.write("ok"
 }
     </script>
 
@@ -89,7 +89,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="오라클 라이브 SQL 소개" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Listening port via Node.js" href="/feed.xml" />
 
 
     <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="dfe9721d-cc70-40b9-b842-68361859ef8a";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
@@ -156,160 +156,95 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full post no-image">
+        <article class="post-full post ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="10 January 2019">10 January 2019</time>
+                    <time class="post-full-meta-date" datetime="21 April 2020">21 April 2020</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/oracle/'>ORACLE</a>,
+                               <a href='/tag/node/'>NODE</a>,
                             
                         
                             
-                               <a href='/tag/dbms/'>DBMS</a>,
-                            
-                        
-                            
-                               <a href='/tag/sql/'>SQL</a>
+                               <a href='/tag/network/'>NETWORK</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">오라클 라이브 SQL 소개</h1>
+                <h1 class="post-full-title">Listening port via Node.js</h1>
             </header>
 
+            
+            <figure class="post-full-image" style="background-image: url(/assets/images/cover/nodejs.png)">
+            </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p><strong>Oracle Live SQL을 소개합니다.</strong></p>
+                    <p>노드로 포트 열기<br />
+(Listening port via Node.js)</p>
 
-<p><strong>오라클</strong>을 설치하고 <code>Sample schema</code>를 추가하는 것은 개발자라면 기본으로 할 수 있어야 할 것입니다!</p>
+<hr />
 
-<p>그렇다고 테스트나 학습을 위해 필요할 때마다 서버를 만드는 것은 참으로 고욕입니다.</p>
-
-<ul>
-  <li>공통으로 사용할 수 있는 테스트 서버의 경우는 마음대로 데이터베이스나 테이블을 다루기 힘들고</li>
-  <li>개인 서버를 운용하자니 번거롭기도 하고 리소스가 부족하기도 합니다.</li>
-</ul>
-
-<p>이럴때 간단한 테스트나 학습용으로 이용하기 좋은 오라클 서비스를 소개합니다.</p>
-
-<h3 id="목차">목차</h3>
 <blockquote>
-  <ul>
-    <li><a href="#기본-사용법">기본 사용법</a></li>
-    <li><a href="#테이블-직접-생성하여-사용하는-방법">테이블 직접 생성하여 사용하는 방법</a></li>
-    <li><a href="#기본-스키마를-사용하는-방법">기본 스키마를 사용하는 방법</a></li>
-    <li><a href="#기타">기타</a></li>
-  </ul>
+  <p>간단하게 Node.js 에서 포트 대기하는 방법</p>
 </blockquote>
 
-<h3 id="기본-사용법">기본 사용법</h3>
-<ol>
-  <li>
-    <p>사이트 접속</p>
+<p><strong><font color="red" size="3">이미지를 클릭하면 원본 크기로 보실 수 있습니다.</font></strong></p>
 
-    <p>다음 주소를 브라우저에 입력합니다.</p>
+<h3 id="스크립트-예제">스크립트 예제</h3>
+<pre><code class="language-node">var net = require('net');
 
-    <p><a href="https://livesql.oracle.com" target="_blank">https://livesql.oracle.com</a></p>
+// 서버를 생성
+var server = net.createServer(function(socket){
+  console.log(socket.address().address + " connected.");
+  
+  // client로 부터 오는 data를 화면에 출력
+  socket.on('data', function(data){
+    console.log('rcv:' + data);
+    //socket.write("ok received\r\n");
+    //data에는 이미 newline 문자가 포함되어있음
+    socket.write("ok received, " + data);
+    console.log('snd:' + 'ok');
+  });
+  // client와 접속이 끊기는 메시지 출력
+  socket.on('close', function(){
+    console.log('client disconnted.');
+  });
+  // client가 접속하면 화면에 출력해주는 메시지
+  socket.write('welcome to server\r\n');
+});
 
-    <p><a href="assets/images/42c48740a84b48f6336e2d7585a56f74/001.png" caption="Homepage Main"><img src="assets/images/blank.png" alt="Homepage Main" data-echo="assets/images/42c48740a84b48f6336e2d7585a56f74/001.840.jpg" /></a></p>
-  </li>
-  <li>
-    <p><code>SQL Worksheet</code> 메뉴를 선택합니다. 이때 <u>사이트에 로그인이 필요</u>합니다.</p>
+// 에러가 발생할 경우 화면에 에러메시지 출력
+server.on('error', function(err){
+  console.log('err'+ err  );
+});
 
-    <ul>
-      <li>SQL 입력창이 나타나면 아래의 SQL을 입력하여 실행해봅니다.</li>
-    </ul>
-
-    <pre><code class="language-sql">select * from emp;
+// Port 5000으로 접속이 가능하도록 대기
+server.listen(5000, function(){
+  console.log('linsteing on 5000..');
+});
 </code></pre>
 
-    <ul>
-      <li>현재는 세션에 사용자 테이블이 만들어져있지 않아서 오류가 발생합니다.</li>
-    </ul>
-
-    <pre><code class="language-sql">ORA-00942: table or view does not exist
-</code></pre>
-
-    <p><a href="assets/images/42c48740a84b48f6336e2d7585a56f74/002.png" caption="SQL 실행"><img src="assets/images/blank.png" alt="SQL 실행" data-echo="assets/images/42c48740a84b48f6336e2d7585a56f74/002.840.jpg" /></a></p>
-  </li>
-</ol>
-
-<h3 id="테이블-직접-생성하여-사용하는-방법">테이블 직접 생성하여 사용하는 방법</h3>
-<ol>
-  <li>
-    <p><code>Code Library</code>에서 <code>EMP and DEPT</code> 를 실행하여 테이블을 생성합니다.</p>
-
-    <ul>
-      <li>
-        <p><code>EMP and DEPT</code> 라이브러리 선택</p>
-
-        <p><a href="assets/images/42c48740a84b48f6336e2d7585a56f74/003.png" caption="EMP and DEPT 라이브러리 선택"><img src="assets/images/blank.png" alt="EMP and DEPT 라이브러리 선택" data-echo="assets/images/42c48740a84b48f6336e2d7585a56f74/003.840.jpg" /></a></p>
-      </li>
-      <li>
-        <p><code>Run Script</code> 버튼을 눌러 스크립트 실행하면 수행 여부를 확인합니다. <code>Perform Actions(s)</code> 버튼을 누르세요.</p>
-
-        <p><a href="assets/images/42c48740a84b48f6336e2d7585a56f74/004.png" caption="스크립트 실행"><img src="assets/images/blank.png" alt="스크립트 실행" data-echo="assets/images/42c48740a84b48f6336e2d7585a56f74/004.840.jpg" /></a></p>
-
-        <p><a href="assets/images/42c48740a84b48f6336e2d7585a56f74/005.png" caption="스크립트 확인"><img src="assets/images/blank.png" alt="스크립트 확인" data-echo="assets/images/42c48740a84b48f6336e2d7585a56f74/005.840.jpg" /></a></p>
-      </li>
-      <li>
-        <p><code>SQL Worksheet</code> 버튼을 눌러 SQL 창으로 이동합니다.</p>
-
-        <p><a href="assets/images/42c48740a84b48f6336e2d7585a56f74/006.png" caption="스크립트 완료"><img src="assets/images/blank.png" alt="스크립트 완료" data-echo="assets/images/42c48740a84b48f6336e2d7585a56f74/006.840.jpg" /></a></p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>SQL 실행</p>
-
-    <ul>
-      <li>
-        <p>이제 <code>emp</code>와 <code>dept</code> 테이블이 생성되어 SQL문을 수행할 수 있습니다.</p>
-
-        <p><a href="assets/images/42c48740a84b48f6336e2d7585a56f74/007.png" caption="select emp table"><img src="assets/images/blank.png" alt="select emp table" data-echo="assets/images/42c48740a84b48f6336e2d7585a56f74/007.840.jpg" /></a></p>
-      </li>
-      <li>
-        <p>수행 할 SQL을 선택하고 <code>Run</code> 버튼을 누르면 선택된 명령만 수행됩니다.</p>
-
-        <p><a href="assets/images/42c48740a84b48f6336e2d7585a56f74/008.png" caption="select dept table"><img src="assets/images/blank.png" alt="select dept table" data-echo="assets/images/42c48740a84b48f6336e2d7585a56f74/008.840.jpg" /></a></p>
-      </li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="기본-스키마를-사용하는-방법">기본 스키마를 사용하는 방법</h3>
-<ol>
-  <li>
-    <p>스키마 선택</p>
-
-    <ul>
-      <li>
-        <p><code>Schema</code> 메뉴를 선택하면 <code>My Schema</code> 가 기본 선택되어있습니다. 콤보 박스를 눌러보면 다음과 같이 이미 등록된 여러 스키마를 볼 수 있습니다.
-<a href="assets/images/42c48740a84b48f6336e2d7585a56f74/009.png" caption="Schema 선택"><img src="assets/images/blank.png" alt="Schema 선택" data-echo="assets/images/42c48740a84b48f6336e2d7585a56f74/009.840.jpg" /></a></p>
-      </li>
-      <li>
-        <p>테이블 이름 앞에 스키마 이름을 추가해서 SQL문을 작성하면 기존에 존재하는 스키마를 모두 사용할 수 있습니다.
-<a href="assets/images/42c48740a84b48f6336e2d7585a56f74/010.png" caption="Schema Select"><img src="assets/images/blank.png" alt="Schema Select" data-echo="assets/images/42c48740a84b48f6336e2d7585a56f74/010.840.jpg" /></a></p>
-      </li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="기타">기타</h3>
-
+<h3 id="실행">실행</h3>
 <ul>
-  <li><code>My Scripts</code>에 직접 스크립트를 저장해서 일괄 수행할 수 있습니다.</li>
-  <li><code>My Session</code>에서 초기화를 하면 스크립트 수행으로 생성된 오브젝트들을 삭제하여 처음 상태로 돌아갈 수 있습니다.</li>
-  <li>결과는 최대 50줄만 보이며 전체 결과는 CSV 형태의 텍스트 문서로 다운로드 할 수 있습니다. <code>Actions</code> 에서 최대 5000 까지 설정할 수도 있습니다.결</li>
+  <li>스크립트를 실행하면 5000 포트로 대기
+<a href="assets/images/8c04743de29cba32929e7a997b67c67e/001.png" caption="Listening"><img src="assets/images/blank.png" alt="Listening" data-echo="assets/images/8c04743de29cba32929e7a997b67c67e/001.840.jpg" /></a></li>
 </ul>
 
-<p><code>#Oracle</code>, <code>#오라클</code>, <code>Live SQL##</code>, <code>#라이브 SQL</code>, <code>#Database</code>, <code>#DBMS</code>, <code>#데이터베이스</code></p>
+<h3 id="접속">접속</h3>
+<ul>
+  <li>netcat
+<a href="assets/images/8c04743de29cba32929e7a997b67c67e/002.png" caption="Netcat Test"><img src="assets/images/blank.png" alt="Netcat Test" data-echo="assets/images/8c04743de29cba32929e7a997b67c67e/002.840.jpg" /></a></li>
+</ul>
+
+<h3 id="전송">전송</h3>
+<p><a href="assets/images/8c04743de29cba32929e7a997b67c67e/003.png" caption="Say Hi"><img src="assets/images/blank.png" alt="Say Hi" data-echo="assets/images/8c04743de29cba32929e7a997b67c67e/003.840.jpg" /></a></p>
+
+<p><code>#포트</code>, <code>#네트워크</code></p>
 
                     <!-- Google adsense code -->
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -386,8 +321,8 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            this.page.url = 'https://kiros33.github.io//20190110135444-42c48740a84b48f6336e2d7585a56f74';
-                            this.page.identifier = 'https://kiros33.github.io//20190110135444-42c48740a84b48f6336e2d7585a56f74';
+                            this.page.url = 'https://kiros33.github.io//bec2b6d5';
+                            this.page.identifier = 'https://kiros33.github.io//bec2b6d5';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -413,143 +348,36 @@ into the {body} of the default.hbs template -->
                 
                 
                 
-                    <article class="read-next-card"
-                        
-                            style="background-image: url(/assets/images/blog-cover.jpg)"
-                        
-                    >
-                        <header class="read-next-card-header">
-                            <small class="read-next-card-header-sitetitle">&mdash; 배저씨네 &mdash;</small>
-                            
-                                <h3 class="read-next-card-header-title"><a href="/tag/oracle/">Oracle</a></h3>
-                            
-                        </header>
-                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
-</div>
-                        <div class="read-next-card-content">
-                            <ul>
-                                
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/20200422093956-6408d97e49a3f096d69f678b6aa1ea29">Setting the NLS_LANG Environment Variable for Oracle Databases</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                            </ul>
-                        </div>
-                        <footer class="read-next-card-footer">
-                            <a href="/tag/oracle/">
-                                
-                                    See all 1 posts  →
-                                
-                            </a>
-                        </footer>
-                    </article>
-                
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
-    <article class="post-card post-template no-image">
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/6408d97e">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/oracle-database.png)"></div>
+            </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/20190114171435-74255a158f882511e95bb007d40184ff">
+            <a class="post-card-content-link" href="/6408d97e">
                 <header class="post-card-header">
                     
                         
                             
-                               <span class="post-card-tags">Download</span>
+                               <span class="post-card-tags">Oracle</span>
                             
                         
                             
-                                <span class="post-card-tags">Video</span>
+                                <span class="post-card-tags">Database</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Mgoon, Vine, Twitter, Youku, Vimeo, Facebook, Dailymotion 사이트의 비디오 다운로드 방법</h2>
+                    <h2 class="post-card-title">Setting the NLS_LANG Environment Variable for Oracle Databases</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>Mgoon, Vine, Twitter, Youku, Vimeo, Facebook, Dailymotion 등의 비디오를 쉽게 다운로드하는 방법 --- 와이프가 영화를 찾아 달라는데 OTT나 DVD를 찾아봐도 없고 마침 3년전 데일리모션에 올라온게 보여서 다운로드하는 과정을 기록했습니다. > 그냥 넘어가기도 그렇고</p>
+                    <p>오라클 데이터베이스의 NLS_LANG 환경 변수 설정 (Setting the NLS_LANG Environment Variable for Oracle Databases) --- > Console 이나 Client 프로그램 혹은 Apache Tomcat 등에서 Oracle Database에 접속할 때 언어 설정으로 오류가 발생할 경우</p>
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -586,29 +414,39 @@ into the {body} of the default.hbs template -->
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
             
                 
-    <article class="post-card post-template no-image">
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/d4e967ea">
+                <div class="post-card-image" style="background-image: url(/assets/images/cover/win-powershell.png)"></div>
+            </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/terms-policy">
+            <a class="post-card-content-link" href="/d4e967ea">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Policies</span>
+                               <span class="post-card-tags">Command</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Powershell</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Windows</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Network</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">서비스 약관</h2>
+                    <h2 class="post-card-title">Listening port via Powershell</h2>
                 </header>
                 <section class="post-card-excerpt">
-                    <p>서비스 약관
-
-최종 수정 날짜: 2018/11/16
-
-내용
-
-</p>
+                    <p>파워쉘로 포트 열기 (Listening port via Powershell) 참조 사이트 SkyRAT/assets/modules/Listen-Port.ps1 별로 고민없이 가져다 접속 테스트에 사용했습니다. 종종 포트가 열렸는지 확인해야하는데 서버측 포트 바인딩하는게 쉽지 않을 때까 있는데 아주 유용합니다. 이미지를 클릭하면 원본 크기로</p>
                 </section>
             </a>
             <footer class="post-card-meta">
@@ -657,18 +495,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">오라클 라이브 SQL 소개</div>
+    <div class="floating-header-title">Listening port via Node.js</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%98%A4%EB%9D%BC%ED%81%B4+%EB%9D%BC%EC%9D%B4%EB%B8%8C+SQL+%EC%86%8C%EA%B0%9C&amp;url=https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Listening+port+via+Node.js&amp;url=https://kiros33.github.io/bec2b6d5"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kiros33.github.io/20190110135444-42c48740a84b48f6336e2d7585a56f74"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://kiros33.github.io/bec2b6d5"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
@@ -693,7 +531,7 @@ into the {body} of the default.hbs template -->
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://kiros33.github.io/">배저씨네</a> &copy; 2021</section>
+                <section class="copyright"><a href="https://kiros33.github.io/">배저씨네</a> &copy; 2022</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
